@@ -1,0 +1,55 @@
+import { observer } from 'mobx-react-lite';
+import React, { FC, useEffect } from 'react';
+import { AppHeader } from '../../shared/StyledComponents/Headers';
+import lobbyList from '../../stores/lobbyList';
+import { ILobbyStore } from '../../stores/types';
+import { GameStatus, ISetLobbyProps } from '../App/types';
+import { LobbyTable } from './styledComponents';
+
+const LobbyList: FC<ISetLobbyProps> = observer((props) => {
+  useEffect(() => {
+    lobbyList.lobbyList();
+  }, []);
+
+  const handleJoin = (user: string, lobby: ILobbyStore) => {
+    lobby.connectToLobby(user);
+    props.handleSetLobby(
+      GameStatus.SET_SHIPS,
+      lobby
+    );
+  };
+
+  const items: JSX.Element[] = [];
+  for (let record of lobbyList.lobbys.values()) {
+    items.push(
+      <tr key={record.name}>
+        <td><button className="btn btn-secondary" onClick={() => handleJoin(record.name, record.value)}>Join</button></td>
+        <td>{record.value.lobbyName}</td>
+        <td>{record.value.x}x{record.value.y}</td>
+        <td>{record.value.ships4n}/{record.value.ships3n}/{record.value.ships2n}/{record.value.ships1n}</td>
+      </tr>
+    )
+  }
+
+  return (
+    <>
+      <AppHeader>Lobby list</AppHeader>
+      <LobbyTable>
+        <thead>
+          <tr>
+            <td></td>
+            <td>Lobby name</td>
+            <td>Field size</td>
+            <td>Ships 4x/3x/2x/1x</td>
+          </tr>          
+        </thead>
+        <tbody>
+          {items}
+        </tbody>
+        
+      </LobbyTable>
+    </>
+  )
+});
+
+export default LobbyList;
