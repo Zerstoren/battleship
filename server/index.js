@@ -12,7 +12,7 @@ const lobbys = {};
 
 io.on('connection', (client) => {
   userPool.push(client);
-  client.on('disconnect', () => userPool.push(client));
+  client.on('disconnect', () => processDisconnect(client));
 
   client.on('message', (path, data) => {
     if (path === 'newLobby') {
@@ -28,8 +28,54 @@ io.on('connection', (client) => {
     if (path === 'lobbyList') {
       client.send('lobbyList', lobbys);
     }
+
+    if (path === 'connectLobby') {
+      connectUsersPair(client, client.conn.id, data);
+    }
   });
 });
+
+const findClientById = (clientId) => userPool.find((client) => {
+  return client.conn.id === clientId;
+});
+
+const connectUsersPair = (client, clientId, targetId) => {
+  if (!lobbys[targetId]) {
+    client.send('opponentDisconnect');
+    return;
+  }
+  const targetClient = findClientById(targetId);
+
+  if (!targetClient) {
+    client.send('opponentDisconnect');
+    return;
+  }
+
+  userPair[clientId] = targetId;
+  userPair[targetId] = clientId;
+  delete lobbys[targetId];
+
+  client.send('gamePrepare');
+  targetClient.send('ganePrepare');
+  resendLobbyListForAll();
+};
+
+const processDisconnect = (client) => {
+  const connId = client.conn.id;
+  if (userPair[connId]) {
+    const targetId = userPair[connId];
+    delete userPair[targetId];
+    delete userPair[connId];
+    findClientById(targetId).send('opponentDisconnect');
+  }
+
+  userPool.slice(userPool.indexOf(client), 1);
+
+  if (lobbys[connId]) {
+    delete lobbys[connId];
+    resendLobbyListForAll();
+  }
+};
 
 const resendLobbyListForAll = () => {
   userPool.forEach((client) => {

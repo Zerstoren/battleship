@@ -2,8 +2,8 @@ import { applySnapshot, getSnapshot, types } from "mobx-state-tree";
 import { connectLobby, pubLobby } from "../API/lobby";
 import { ISnapshotOutLobbyStore } from "./types";
 
-const lobbyStore = types.model({
-  lobbyName: types.string,
+const lobbyStore = types.model('Lobby', {
+  lobbyName: types.identifier,
   x: types.optional(types.number, 10),
   y: types.optional(types.number, 10),
   ships4n: types.optional(types.number, 1),
@@ -12,8 +12,8 @@ const lobbyStore = types.model({
   ships1n: types.optional(types.number, 4),
 }).actions(self => {
   return {
-    publishLobby(data: ISnapshotOutLobbyStore) {
-      applySnapshot(self, data);
+    publishLobby() {
+      // applySnapshot(self, data);
       pubLobby(getSnapshot(self));
     },
 

@@ -1,4 +1,5 @@
 import * as lobbyListStore from '../stores/lobbyList';
+import mainStore from '../stores/mainStore';
 import { ISnapshotOutLobbyStore } from '../stores/types';
 import client from './index';
 
@@ -21,5 +22,9 @@ export const connectLobby = (userId: string) => {
 client.on('message', (path: string, data: any) => {
   if (path === 'lobbyList') {
     lobbyListStore.default.updateFromServer(data);
+  }
+
+  if (path === 'opponentDisconnect') {
+    mainStore.setError('Opponent disconnect');
   }
 });

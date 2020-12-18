@@ -2,11 +2,11 @@ import { getSnapshot } from 'mobx-state-tree';
 import React, { FC } from 'react';
 import { Field, Form } from 'react-final-form';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
+import lobbyStore from '../../stores/lobby';
+import { ISnapshotOutLobbyStore } from '../../stores/types';
 import { GameStatus, IProps } from '../App/types';
 import { onValidate } from './helpersFns';
-import lobbyStore from '../../stores/lobby';
 import { BlockSpacing, FloatingInput, FormFloating } from './styledComponents';
-import { ISnapshotOutLobbyStore } from '../../stores/types';
 
 const CreateLobby: FC<IProps> = (props) => {
   const {handleChangeGameStatus} = props;
@@ -19,7 +19,8 @@ const CreateLobby: FC<IProps> = (props) => {
   };
 
   const handleSubmit = (values: ISnapshotOutLobbyStore) => {
-    store.publishLobby(values);
+    const store = lobbyStore.create(values);
+    store.publishLobby();
     handleChangeGameStatus(GameStatus.WAIT_CONNECT);
   };
 

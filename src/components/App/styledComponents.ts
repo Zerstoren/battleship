@@ -5,3 +5,9 @@ export const CenteredDiv = styled.div`
   margin: 0 auto;
   text-align: center;
 `;
+
+export const AlertError = styled.div.attrs((props) => ({
+  className: "alert alert-warning alert-dismissible fade show"
+}))`
+text-align: center;
+`;

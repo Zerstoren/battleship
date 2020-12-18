@@ -5,7 +5,7 @@ import CreateLobby from '../CreateLobby';
 import LobbyList from '../LobbyList';
 import Main from '../MainPage';
 import WaitConnect from '../WaitConnect';
-import { CenteredDiv } from './styledComponents';
+import { AlertError, CenteredDiv } from './styledComponents';
 import { GameStatus, IAppProps } from './types';
 
 const App: FC<IAppProps> = inject("mainStore")(observer((props) => {
@@ -13,6 +13,7 @@ const App: FC<IAppProps> = inject("mainStore")(observer((props) => {
 
   const handleGameStart = (startGame: GameStatus) => state!.setGameStatus(startGame);
   const handleSetLobby = (startGame: GameStatus, lobby: ILobbyStore) => state!.setLobby(startGame, lobby);
+  const handleAcceptError = () => state?.setError('');
 
   let component = null;
   
@@ -34,10 +35,22 @@ const App: FC<IAppProps> = inject("mainStore")(observer((props) => {
       break;
   }
 
+  let err = null;
+  
+  if (state!.error) {
+    err = <AlertError>
+      <strong>{state!.error}</strong>
+      <button type="button" className="btn-close" onClick={handleAcceptError}></button>
+    </AlertError>;
+  }
+
   return (
-    <CenteredDiv>
-      {component}
-    </CenteredDiv>
+    <>
+      {err}
+      <CenteredDiv>
+        {component}
+      </CenteredDiv>
+    </>
   );
 }));
 
