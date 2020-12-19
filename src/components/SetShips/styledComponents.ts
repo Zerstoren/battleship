@@ -17,3 +17,17 @@ height: ${(props: FieldTableProps) => (props.sizeY + 1) * 30}px;
   padding: 0;
 }
 `;
+
+export const ShipBlockPadding = styled.div`
+padding-left: 25px;
+`;
+
+export const ShipBlockElement = styled.div.attrs((props) => ({
+  className: 'd-flex'
+}))`
+padding: 10px 0;
+
+& span {
+  padding-left: 10px;
+}
+`;

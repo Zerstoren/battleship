@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { AppHeader } from '../../../shared/StyledComponents/Headers';
+import { ILobbyStore } from '../../../stores/lobby';
 import { FieldTable } from '../styledComponents';
 
 interface IProp {
-  lobby: any
+  lobby: ILobbyStore
 }
 
 const letters: string[] = [
@@ -34,8 +34,6 @@ const TableField: FC<IProp> = (props) => {
   
   return (
     <>
-      <AppHeader>Set ships</AppHeader>
-
       <FieldTable sizeX={lobby.x} sizeY={lobby.y}>
         <thead>
           <tr>
