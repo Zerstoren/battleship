@@ -1,5 +1,5 @@
 import { ISnapshotOutLobbyStore } from "../../stores/lobby";
-import { FormErrors } from "./types";
+import { FormErrors, FormInputData } from "./types";
 
 export const calculateRequredFieldSize = (
   ships4n: number, 
@@ -10,8 +10,19 @@ export const calculateRequredFieldSize = (
   return Number(((ships4n * 4) + (ships3n * 3) + (ships2n * 2) + (ships1n * 1)) * 1.65);
 }
 
-export const onValidate = (fields: ISnapshotOutLobbyStore) => {
+export const convertFormDataToModel = (values: FormInputData) : ISnapshotOutLobbyStore => ({
+  lobbyName: values.lobbyName,
+  x: Number.parseInt(values.x),
+  y: Number.parseInt(values.y),
+  ships1n: Number.parseInt(values.ships1n),
+  ships2n: Number.parseInt(values.ships2n),
+  ships3n: Number.parseInt(values.ships3n),
+  ships4n: Number.parseInt(values.ships4n),
+});
+
+export const onValidate = (formData: FormInputData) => {
   const err: FormErrors = {};
+  const fields = convertFormDataToModel(formData);
 
   if (!fields.lobbyName?.length) {
     err.lobbyName = 'Lobby name is required';
