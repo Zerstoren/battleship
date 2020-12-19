@@ -1,12 +1,11 @@
-import MainStore from './mainStore';
-import { IMainStore } from './types';
+import MainStore, { IMainStore } from './mainStore';
 
 interface IStore {
   mainStore: IMainStore 
 };
 
 const Stores: IStore = {
-  mainStore: MainStore
+  mainStore: MainStore,
 };
 
 export type {

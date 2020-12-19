@@ -1,11 +1,11 @@
 import { applySnapshot, types } from "mobx-state-tree";
 import { lobbyList as APILobbyList } from "../API/lobby";
-import lobbyStore from "./lobby";
 import { IDataFromServer } from "../components/LobbyList/types";
+import LobbyStore from "./lobby";
 
 const LobbyElement = types.model('LobbyElement', {
   name: types.identifier,
-  value: types.late(() => lobbyStore)
+  value: types.late(() => LobbyStore)
 });
 
 const LobbyList = types.model('LobbyList', {

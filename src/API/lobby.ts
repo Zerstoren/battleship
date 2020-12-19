@@ -1,6 +1,5 @@
+import { ISnapshotOutLobbyStore, lobbyElementsStores } from '../stores/lobby';
 import * as lobbyListStore from '../stores/lobbyList';
-import mainStore from '../stores/mainStore';
-import { ISnapshotOutLobbyStore } from '../stores/types';
 import client from './index';
 
 export const pubLobby = (lobbyData: ISnapshotOutLobbyStore) => {
@@ -21,10 +20,13 @@ export const connectLobby = (userId: string) => {
 
 client.on('message', (path: string, data: any) => {
   if (path === 'lobbyList') {
+    lobbyElementsStores.addItems(data);
     lobbyListStore.default.updateFromServer(data);
   }
 
   if (path === 'opponentDisconnect') {
-    mainStore.setError('Opponent disconnect');
+    import('../stores/mainStore').then((mainStore) => {
+      mainStore.default.setError('Opponent disconnect');
+    });
   }
 });

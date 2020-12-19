@@ -1,4 +1,4 @@
-import { ISnapshotOutLobbyStore } from "../../stores/types";
+import { ISnapshotOutLobbyStore } from "../../stores/lobby";
 
 export interface IDataFromServer {
   [key: string]: ISnapshotOutLobbyStore

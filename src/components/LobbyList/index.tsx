@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
 import React, { FC, useEffect } from 'react';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
+import { ILobbyStore } from '../../stores/lobby';
 import lobbyList from '../../stores/lobbyList';
-import { ILobbyStore } from '../../stores/types';
 import { GameStatus, ISetLobbyProps } from '../App/types';
 import { LobbyTable } from './styledComponents';
 

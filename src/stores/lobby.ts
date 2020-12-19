@@ -1,8 +1,8 @@
-import { applySnapshot, getSnapshot, types } from "mobx-state-tree";
+import { getSnapshot, Instance, SnapshotIn, SnapshotOut, types } from "mobx-state-tree";
 import { connectLobby, pubLobby } from "../API/lobby";
-import { ISnapshotOutLobbyStore } from "./types";
+import { IDataFromServer } from "../components/LobbyList/types";
 
-const lobbyStore = types.model('Lobby', {
+export const lobbyIndexes = {
   lobbyName: types.identifier,
   x: types.optional(types.number, 10),
   y: types.optional(types.number, 10),
@@ -10,17 +10,32 @@ const lobbyStore = types.model('Lobby', {
   ships3n: types.optional(types.number, 2),
   ships2n: types.optional(types.number, 3),
   ships1n: types.optional(types.number, 4),
-}).actions(self => {
+};
+
+const LobbyStore = types.model('Lobby', lobbyIndexes).actions(self => {
   return {
     publishLobby() {
-      // applySnapshot(self, data);
       pubLobby(getSnapshot(self));
     },
 
     connectToLobby(userId: string) {
-      connectLobby(userId)
+      connectLobby(userId);
     }
   }
 });
 
-export default lobbyStore;
+const LobbyElementsStores = types.model("LobbyElements", {
+  lobbys: types.array(LobbyStore)
+}).actions(self => ({
+  addItems(data: IDataFromServer) {
+    self.lobbys.concat(Object.values(data))
+  }
+}));
+
+export const lobbyElementsStores = LobbyElementsStores.create();
+
+
+export interface ILobbyStore extends Instance<typeof LobbyStore>{}
+export interface ISnapshotInLobbyStore extends SnapshotIn<typeof LobbyStore>{}
+export interface ISnapshotOutLobbyStore extends SnapshotOut<typeof LobbyStore>{}
+export default LobbyStore;

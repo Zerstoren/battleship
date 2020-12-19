@@ -1,4 +1,5 @@
-import { ILobbyStore, IMainStore } from "../../stores/types";
+import { ILobbyStore } from "../../stores/lobby";
+import { IMainStore } from "../../stores/mainStore";
 
 export enum GameStatus {
   MAIN = 'main',

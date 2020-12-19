@@ -1,4 +1,4 @@
-import { ISnapshotOutLobbyStore } from "../../stores/types";
+import { ISnapshotOutLobbyStore } from "../../stores/lobby";
 import { FormErrors } from "./types";
 
 export const calculateRequredFieldSize = (

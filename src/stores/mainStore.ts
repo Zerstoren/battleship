@@ -1,7 +1,8 @@
-import { types } from "mobx-state-tree";
-import lobbyStore from "./lobby";
+import { getSnapshot, Instance, types } from "mobx-state-tree";
 import { GameStatus } from "../components/App/types";
-import { ILobbyStore } from "./types";
+import { ILobbyStore, lobbyIndexes } from "./lobby";
+
+const LobbyElement = types.model("MainStore_LobyElement", lobbyIndexes);
 
 const MainStore = types.model("MainStore", {
   status: types.enumeration<GameStatus>('GameStatus', [
@@ -13,7 +14,7 @@ const MainStore = types.model("MainStore", {
     GameStatus.GAME,
     GameStatus.GAMEOVER
   ]),
-  currentLobby: types.union(types.null, types.reference(types.late(() => lobbyStore))),
+  currentLobby: types.maybeNull(LobbyElement),
   error: types.optional(types.string, ''),
 }).actions(self => ({
   setGameStatus(gameStatus: GameStatus) {
@@ -21,7 +22,7 @@ const MainStore = types.model("MainStore", {
   },
   setLobby(gameStatus: GameStatus, lobby: ILobbyStore) {
     self.status = gameStatus;
-    self.currentLobby = lobby;
+    self.currentLobby = getSnapshot(lobby);
   },
   setError(message: string) {
     self.error = message;
@@ -29,11 +30,13 @@ const MainStore = types.model("MainStore", {
   }
 }));
 
+export interface IMainStore extends Instance<typeof MainStore>{};
+
 export {
   MainStore
 };
 
 export default MainStore.create({
   status: GameStatus.MAIN,
-  currentLobby: null,
+  currentLobby: null
 });
