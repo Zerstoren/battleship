@@ -5,7 +5,8 @@ import { ILobbyStore } from '../../stores/lobby';
 import SelectShipsPosition from './Field/SelectShipsPosition';
 import TableField from './Field/TableField';
 import { IProps } from './types';
-
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
   const mainStore = props.mainStore;
@@ -15,10 +16,12 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
     <>
       <AppHeader>Set ships</AppHeader>
       <div className="d-flex">
-        <div>
-          <TableField lobby={lobby as ILobbyStore} />
-        </div>
-        <SelectShipsPosition lobby={lobby as ILobbyStore} />
+        <DndProvider backend={HTML5Backend}>
+          <div>
+            <TableField lobby={lobby as ILobbyStore} />
+          </div>
+          <SelectShipsPosition lobby={lobby as ILobbyStore} />
+        </DndProvider>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useDrag } from 'react-dnd';
 import { Ship, ShipBlock } from '../../../shared/StyledComponents/Ship';
 
 interface IProp {
@@ -7,6 +8,9 @@ interface IProp {
 
 const ShipElement : FC<IProp> = (props) => {
   const { shipSize } = props;
+  const [, drag] = useDrag({
+    item: {type: `ship`, size: shipSize}
+  });
 
   const items: JSX.Element[] = [];
 
@@ -15,7 +19,7 @@ const ShipElement : FC<IProp> = (props) => {
   }
 
   return (
-    <Ship>
+    <Ship ref={drag}>
       {items}
     </Ship>
   );

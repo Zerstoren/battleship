@@ -1,6 +1,9 @@
-import React, { FC } from 'react';
-import { ILobbyStore } from '../../../stores/lobby';
-import { FieldTable } from '../styledComponents';
+import React, { FC, useState } from 'react';
+import { ILobbyStore } from '../../../../stores/lobby';
+import { FieldTable } from '../../styledComponents';
+import Cell from './Cell';
+import { matrix, matrixClearShadows, matrixSetShadow } from './helperFn';
+import { IMatrix } from './types';
 
 interface IProp {
   lobby: ILobbyStore
@@ -14,6 +17,22 @@ const letters: string[] = [
 
 const TableField: FC<IProp> = (props) => {
   const lobby = props.lobby;
+  const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
+
+  const handleShipDrop = () => {
+
+  }
+
+  const handleShadowDrop = (x: number, y: number, shipSize: number) => {
+    setMatrix(
+      matrixSetShadow(
+        matrixClearShadows(dataMatrix),
+        x,
+        y,
+        shipSize
+      )
+    );
+  }
 
   let tr: JSX.Element[] = [];
   let theadTd: JSX.Element[] = [<td key="empty"></td>];
@@ -22,7 +41,14 @@ const TableField: FC<IProp> = (props) => {
     let td: JSX.Element[] = [<td key={`head-${y}`}>{y+1}</td>];
 
     for (let x = 0; x < lobby.x; x++) {
-      td.push(<td key={`${y}-${x}`}></td>);
+      td.push(<Cell 
+        key={`${y}-${x}`} 
+        fill={dataMatrix[y][x]}
+        x={x} 
+        y={y} 
+        onDropShip={handleShipDrop} 
+        onShadowShipDrop={handleShadowDrop}
+      />);
     }
 
     tr.push(<tr key={y}>{td}</tr>);
