@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const shipColor = "rgba(0,0,255,0.25)";
-const shipShadowColor = "rgba(0,0,255,0.25)";
+const shipShadowColor = "rgba(0,0,255,0.12)";
+const shipErrShadowColor = "rgba(255,0,0,0.12)";
 
 interface FieldTableProps {
   sizeX: number,
@@ -21,6 +22,13 @@ height: ${(props: FieldTableProps) => (props.sizeY + 1) * 30}px;
 
   &.ship-shadow {
     background-color: ${shipShadowColor};
+  }
+  &.ship-err-shadow {
+    background-color: ${shipErrShadowColor};
+  }
+  &.ship-set {
+    cursor: pointer;
+    background-color: ${shipColor};
   }
 }
 `;
