@@ -37,11 +37,12 @@ const matrixSetFill = (matrix: IMatrix, x: number, y: number, shipSize: number, 
   });
 }
 
-const matrixPointExists = (matrix: IMatrix, x: number, y: number) : boolean =>
-  matrix[y] ? Boolean(matrix[y][x]) : false
+export const matrixPointExists = (matrix: IMatrix, x: number, y: number) : boolean =>
+  matrix[y] ? matrix[y][x] !== undefined : false
 
-export const matrixRemoveChained = (matrix: IMatrix, x: number, y: number) : IMatrix => {
+export const matrixRemoveChained = (matrix: IMatrix, x: number, y: number) : [IMatrix, number] => {
   const matr = matrix.map(yLine => [...yLine]);
+  let shipSize = 1;
 
   matr[y][x] = MatrixFill.EMPTY;
 
@@ -52,8 +53,14 @@ export const matrixRemoveChained = (matrix: IMatrix, x: number, y: number) : IMa
     if (!matrixPointExists(matr, x-dx, y) || matr[y][x-dx] === MatrixFill.EMPTY) processMinus = false;
     if (!matrixPointExists(matr, x+dx, y) || matr[y][x+dx] === MatrixFill.EMPTY) processPlus = false;
 
-    if (processMinus) matr[y][x-dx] = MatrixFill.EMPTY;
-    if (processPlus) matr[y][x+dx] = MatrixFill.EMPTY;
+    if (processMinus) {
+      shipSize += matr[y][x-dx] === MatrixFill.SET ? 1 : 0;
+      matr[y][x-dx] = MatrixFill.EMPTY;
+    }
+    if (processPlus) {
+      shipSize += matr[y][x+dx] === MatrixFill.SET ? 1 : 0;
+      matr[y][x+dx] = MatrixFill.EMPTY;
+    }
   }
 
   processMinus = true;
@@ -62,16 +69,26 @@ export const matrixRemoveChained = (matrix: IMatrix, x: number, y: number) : IMa
     if (!matrixPointExists(matr, x, y-dy) || matr[y-dy][x] === MatrixFill.EMPTY) processMinus = false;
     if (!matrixPointExists(matr, x, y+dy) || matr[y+dy][x] === MatrixFill.EMPTY) processPlus = false;
 
-    if (processMinus) matr[y-dy][x] = MatrixFill.EMPTY;
-    if (processPlus) matr[y+dy][x] = MatrixFill.EMPTY;
+    if (processMinus) {
+      shipSize += matr[y-dy][x] === MatrixFill.SET ? 1 : 0;
+      matr[y-dy][x] = MatrixFill.EMPTY;
+    }
+    if (processPlus) {
+      shipSize += matr[y+dy][x] === MatrixFill.SET ? 1 : 0;
+      matr[y+dy][x] = MatrixFill.EMPTY;
+    }
   }
 
-  return matr;
+  return [matr, shipSize];
 }
 
 export const matrixCheckCollision = (matrix: IMatrix, x: number, y: number, shipSize: number) : boolean => {
   const collisionMap: Array<[number, number]> = [];
   
+  if (matrixPointExists(matrix, x, y) && matrix[y][x] === MatrixFill.SET) {
+    return false;
+  }
+
   collisionMap.push([x - 1, y]);
   collisionMap.push([x + shipSize, y]);
 
@@ -79,7 +96,7 @@ export const matrixCheckCollision = (matrix: IMatrix, x: number, y: number, ship
     collisionMap.push([dx, y - 1]);
     collisionMap.push([dx, y + 1]);
   }
-
+  
   return collisionMap.every(([x, y]) => !matrixPointExists(matrix, x, y) || matrix[y][x] !== MatrixFill.SET);
 }
 

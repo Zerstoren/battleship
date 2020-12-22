@@ -16,16 +16,28 @@ border-radius: 2px;
 `;
 
 export const Ship = styled.div.attrs((props) => ({
-  className: 'd-flex'
+  className: `d-flex ${props.className}`
 }))`
 
 ${ShipBlock} {
   background-color: rgba(0,0,200, 0.12);
 }
 
+&.disabled {
+  ${ShipBlock} {
+    background-color: rgba(100,100,100, 0.12);
+  }
+}
+
 :hover {
   ${ShipBlock} {
     background-color: rgba(0,0,200, 0.25);
+  }
+}
+
+&.disabled:hover {
+  ${ShipBlock} {
+    background-color: rgba(100,100,100, 0.12);
   }
 }
 `;

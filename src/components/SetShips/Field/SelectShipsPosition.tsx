@@ -1,37 +1,38 @@
+import { observer } from 'mobx-react';
 import React, { FC } from 'react';
-import { ILobbyStore } from '../../../stores/lobby';
 import { ShipBlockElement, ShipBlockPadding } from '../styledComponents';
 import ShipElement from './ShipElement';
 
 interface IProp {
-  lobby: ILobbyStore
+  state: any
 }
 
-const SelectShipsPosition: FC<IProp> = (props) => {
-  const lobby = props.lobby;
+
+const SelectShipsPosition: FC<IProp> = observer((props) => {
+  const {state} = props;
 
   return (
     <>
       <ShipBlockPadding>
         <ShipBlockElement>
-          <ShipElement shipSize={4} />
-          <span> x {lobby.ships4n}</span>
+          <ShipElement shipSize={4} disabled={!Boolean(state.ships4n)} onDragComplete={() => state.decraseShip(4)} />
+          <span> x {state.ships4n}</span>
         </ShipBlockElement>
         <ShipBlockElement>
-          <ShipElement shipSize={3} />
-          <span> x {lobby.ships4n}</span>
+          <ShipElement shipSize={3} disabled={!Boolean(state.ships3n)} onDragComplete={() => state.decraseShip(3)} />
+          <span> x {state.ships3n}</span>
         </ShipBlockElement>
         <ShipBlockElement>
-          <ShipElement shipSize={2} />
-          <span> x {lobby.ships4n}</span>
+          <ShipElement shipSize={2} disabled={!Boolean(state.ships2n)} onDragComplete={() => state.decraseShip(2)} />
+          <span> x {state.ships2n}</span>
         </ShipBlockElement>
         <ShipBlockElement>
-          <ShipElement shipSize={1} />
-          <span> x {lobby.ships4n}</span>
+          <ShipElement shipSize={1} disabled={!Boolean(state.ships1n)} onDragComplete={() => state.decraseShip(1)} />
+          <span> x {state.ships1n}</span>
         </ShipBlockElement>
       </ShipBlockPadding>
     </>
   );
-}
+});
 
 export default SelectShipsPosition;

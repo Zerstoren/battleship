@@ -3,13 +3,20 @@ import { useDrag } from 'react-dnd';
 import { Ship, ShipBlock } from '../../../shared/StyledComponents/Ship';
 
 interface IProp {
-  readonly shipSize: number;
+  onDragComplete: () => void,
+  shipSize: number,
+  disabled: boolean,
 }
 
 const ShipElement : FC<IProp> = (props) => {
-  const { shipSize } = props;
+  const { shipSize, onDragComplete, disabled } = props;
   const [, drag] = useDrag({
-    item: {type: `ship`, size: shipSize}
+    item: {type: `ship`, size: shipSize},
+    end: (item, monitor) => {
+      if (monitor.didDrop()) {
+        onDragComplete();
+      }
+    }
   });
 
   const items: JSX.Element[] = [];
@@ -18,11 +25,19 @@ const ShipElement : FC<IProp> = (props) => {
     items.push(<ShipBlock key={`ship_size_element_${i}`} />);
   }
 
-  return (
-    <Ship ref={drag}>
-      {items}
-    </Ship>
-  );
+  if (disabled) {
+    return (
+      <Ship className='disabled'>
+        {items}
+      </Ship>
+    )
+  } else {
+    return (
+      <Ship ref={drag}>
+        {items}
+      </Ship>
+    );
+  }
 }
 
 export default ShipElement;

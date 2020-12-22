@@ -6,6 +6,7 @@ import { matrix, matrixCheckCollision, matrixClearShadows, matrixRemoveChained, 
 import { IMatrix } from './types';
 
 interface IProp {
+  shipRestore: (shipSize: number) => void,
   lobby: ILobbyStore
 }
 
@@ -16,7 +17,7 @@ const letters: string[] = [
 ];
 
 const TableField: FC<IProp> = (props) => {
-  const lobby = props.lobby;
+  const {lobby , shipRestore} = props;
   const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
   const [[lastX, lastY], setPositions] = useState<[number, number]>([-1, -1]);
 
@@ -54,9 +55,15 @@ const TableField: FC<IProp> = (props) => {
   }
 
   const handleRemove = (x: number, y: number) => {
+    const [matrix, shipSize] = matrixRemoveChained(dataMatrix, x, y);
     setMatrix(
-      matrixRemoveChained(dataMatrix, x, y)
+      matrix
     );
+    shipRestore(shipSize)
+  }
+
+  const handleCanDrop = (x: number, y: number, shipSize: number) => {
+    return matrixCheckCollision(dataMatrix, x, y, shipSize)
   }
 
   let tr: JSX.Element[] = [];
@@ -74,6 +81,7 @@ const TableField: FC<IProp> = (props) => {
         onDropShip={handleShipDrop} 
         onShadowShipDrop={handleShadowDrop}
         onRemoveFromField={handleRemove}
+        onCanDrop={handleCanDrop}
       />);
     }
 

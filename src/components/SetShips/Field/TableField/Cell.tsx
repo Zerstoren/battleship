@@ -6,13 +6,14 @@ interface IProps {
   onDropShip: (x: number, y: number, shipSize: number) => void,
   onShadowShipDrop: (x: number, y: number, shipSize: number) => void,
   onRemoveFromField: (x: number, y: number) => void,
+  onCanDrop: (x: number, y: number, shipSize: number) => boolean,
   fill: MatrixFill,
   x: number,
   y: number,
 }
 
 const Cell : FC<IProps> = (props) => {
-  const { onDropShip, onShadowShipDrop, onRemoveFromField, x, y, fill } = props;
+  const { onDropShip, onShadowShipDrop, onRemoveFromField, onCanDrop, x, y, fill } = props;
   const [, drop] = useDrop<DragObjectItem, void, any>({
     accept: 'ship',
     drop: (item, monitor) => {
@@ -24,7 +25,8 @@ const Cell : FC<IProps> = (props) => {
     },
     
     canDrop: (item, monitor) => {
-      return true;
+      console.log(onCanDrop(x, y, item.size));
+      return onCanDrop(x, y, item.size);
     }    
   });
 
