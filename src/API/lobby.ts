@@ -1,3 +1,4 @@
+import { GameStatus } from '../components/App/types';
 import { ISnapshotOutLobbyStore, lobbyElementsStores } from '../stores/lobby';
 import * as lobbyListStore from '../stores/lobbyList';
 import client from './index';
@@ -27,6 +28,14 @@ client.on('message', (path: string, data: any) => {
   if (path === 'opponentDisconnect') {
     import('../stores/mainStore').then((mainStore) => {
       mainStore.default.setError('Opponent disconnect');
+    });
+  }
+
+  if (path === 'gamePrepare') {
+    import('../stores/mainStore').then((mainStore) => {
+      if (mainStore.default.status === GameStatus.WAIT_CONNECT && mainStore.default.currentLobby !== null) {
+        mainStore.default.setGameStatus(GameStatus.SET_SHIPS);
+      }
     });
   }
 });

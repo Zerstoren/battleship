@@ -84,11 +84,17 @@ export const matrixRemoveChained = (matrix: IMatrix, x: number, y: number) : [IM
 
 export const matrixCheckCollision = (matrix: IMatrix, x: number, y: number, shipSize: number) : boolean => {
   const collisionMap: Array<[number, number]> = [];
-  
-  if (matrixPointExists(matrix, x, y) && matrix[y][x] === MatrixFill.SET) {
-    return false;
-  }
 
+  // Check only ship cells
+  for (let dx = x; dx < x + shipSize; dx++) {
+    if (!matrixPointExists(matrix, dx, y)) {
+      return false;
+    } else if (matrixPointExists(matrix, dx, y) && matrix[y][dx] === MatrixFill.SET) {
+      return false;
+    }
+  }
+  
+  // Collect information about around ship positions
   collisionMap.push([x - 1, y]);
   collisionMap.push([x + shipSize, y]);
 
@@ -96,7 +102,7 @@ export const matrixCheckCollision = (matrix: IMatrix, x: number, y: number, ship
     collisionMap.push([dx, y - 1]);
     collisionMap.push([dx, y + 1]);
   }
-  
+
   return collisionMap.every(([x, y]) => !matrixPointExists(matrix, x, y) || matrix[y][x] !== MatrixFill.SET);
 }
 

@@ -20,9 +20,13 @@ const MainStore = types.model("MainStore", {
   setGameStatus(gameStatus: GameStatus) {
     self.status = gameStatus;
   },
-  setLobby(gameStatus: GameStatus, lobby: ILobbyStore) {
+  setLobby(gameStatus: GameStatus, lobby: ILobbyStore | null) {
     self.status = gameStatus;
-    self.currentLobby = getSnapshot(lobby);
+    if (lobby === null) {
+      self.currentLobby = null;
+    } else {
+      self.currentLobby = getSnapshot(lobby);
+    }
   },
   setError(message: string) {
     self.error = message;

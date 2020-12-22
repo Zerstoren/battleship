@@ -30,6 +30,9 @@ height: ${(props: FieldTableProps) => (props.sizeY + 1) * 30}px;
     cursor: pointer;
     background-color: ${shipColor};
   }
+  &.disabled {
+    background-color: rgba(50,50,50,0.25);
+  }
 }
 `;
 
@@ -46,3 +49,11 @@ padding: 10px 0;
   padding-left: 10px;
 }
 `;
+
+export const ButtonReadyBlock = styled.div`
+text-align: left;
+`;
+
+export const ButtonReady = styled.button.attrs((props) => ({
+  className: 'btn btn-primary'
+}))``

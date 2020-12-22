@@ -10,10 +10,11 @@ interface IProps {
   fill: MatrixFill,
   x: number,
   y: number,
+  disabled: boolean,
 }
 
 const Cell : FC<IProps> = (props) => {
-  const { onDropShip, onShadowShipDrop, onRemoveFromField, onCanDrop, x, y, fill } = props;
+  const { onDropShip, onShadowShipDrop, onRemoveFromField, onCanDrop, x, y, fill, disabled } = props;
   const [, drop] = useDrop<DragObjectItem, void, any>({
     accept: 'ship',
     drop: (item, monitor) => {
@@ -24,10 +25,8 @@ const Cell : FC<IProps> = (props) => {
       onShadowShipDrop(x, y, item.size)
     },
     
-    canDrop: (item, monitor) => {
-      console.log(onCanDrop(x, y, item.size));
-      return onCanDrop(x, y, item.size);
-    }    
+    canDrop: (item, monitor) => 
+      onCanDrop(x, y, item.size)
   });
 
   const handleClick = () =>
@@ -47,6 +46,10 @@ const Cell : FC<IProps> = (props) => {
     case MatrixFill.SET:
       classNames = 'ship-set';
       break;
+  }
+
+  if (classNames && disabled) {
+    classNames = 'disabled';
   }
 
   return (<td ref={drop} className={classNames} onClick={handleClick}></td>);

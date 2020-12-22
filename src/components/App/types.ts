@@ -23,7 +23,7 @@ export interface IAppProps {
 }
 
 export interface IProps {
-  handleChangeGameStatus: (startGame: GameStatus) => void,
+  handleChangeGameStatus: (startGame: GameStatus, lobby?: ILobbyStore | null) => void,
 }
 
 export interface ISetLobbyProps {

@@ -30,6 +30,8 @@ const SelectShipsPosition: FC<IProp> = observer((props) => {
           <ShipElement shipSize={1} disabled={!Boolean(state.ships1n)} onDragComplete={() => state.decraseShip(1)} />
           <span> x {state.ships1n}</span>
         </ShipBlockElement>
+
+        {props.children}
       </ShipBlockPadding>
     </>
   );

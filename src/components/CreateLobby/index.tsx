@@ -15,14 +15,14 @@ const CreateLobby: FC<IProps> = (props) => {
   });
 
   const backToMainPage = () => {
-    handleChangeGameStatus(GameStatus.MAIN);
+    handleChangeGameStatus(GameStatus.MAIN, null);
   };
   
   const handleSubmit = (values: FormInputData) => {
     const store = LobbyStore.create(convertFormDataToModel(values));
     
     store.publishLobby();
-    handleChangeGameStatus(GameStatus.WAIT_CONNECT);
+    handleChangeGameStatus(GameStatus.WAIT_CONNECT, store);
   };
 
   return (

@@ -7,7 +7,8 @@ import { IMatrix } from './types';
 
 interface IProp {
   shipRestore: (shipSize: number) => void,
-  lobby: ILobbyStore
+  lobby: ILobbyStore,
+  disabled: boolean,
 }
 
 const letters: string[] = [
@@ -17,7 +18,7 @@ const letters: string[] = [
 ];
 
 const TableField: FC<IProp> = (props) => {
-  const {lobby , shipRestore} = props;
+  const {lobby , shipRestore, disabled} = props;
   const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
   const [[lastX, lastY], setPositions] = useState<[number, number]>([-1, -1]);
 
@@ -78,6 +79,7 @@ const TableField: FC<IProp> = (props) => {
         fill={dataMatrix[y][x]}
         x={x} 
         y={y} 
+        disabled={disabled}
         onDropShip={handleShipDrop} 
         onShadowShipDrop={handleShadowDrop}
         onRemoveFromField={handleRemove}

@@ -32,6 +32,10 @@ io.on('connection', (client) => {
     if (path === 'connectLobby') {
       connectUsersPair(client, client.conn.id, data);
     }
+
+    if (path === 'pairSend') {
+      pairMessage(client, data);
+    }
   });
 });
 
@@ -56,8 +60,13 @@ const connectUsersPair = (client, clientId, targetId) => {
   delete lobbys[targetId];
 
   client.send('gamePrepare');
-  targetClient.send('ganePrepare');
+  targetClient.send('gamePrepare');
   resendLobbyListForAll();
+};
+
+const pairMessage = (client, data) => {
+  const targetClient = findClientById(userPair[client.conn.id]);
+  targetClient.send('pairGet', data);
 };
 
 const processDisconnect = (client) => {

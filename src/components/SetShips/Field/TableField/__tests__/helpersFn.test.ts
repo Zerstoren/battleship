@@ -47,6 +47,11 @@ test('matrixCollision', () => {
   expect(helperFn.matrixCheckCollision(dataMatrix, 1, 1, 1)).toBeFalsy();
 });
 
+test('matrixCollision_bigShipOutOfEdge', () => {
+  let dataMatrix = helperFn.matrix(3, 3);
+  expect(helperFn.matrixCheckCollision(dataMatrix, 1, 1, 3)).toBeFalsy();
+});
+
 test('matrixClearShadows', () => {
   let dataMatrix = helperFn.matrix(3, 3);
   dataMatrix = helperFn.matrixSetShadow(dataMatrix, 1, 1, 1);
