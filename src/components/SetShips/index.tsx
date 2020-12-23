@@ -1,6 +1,8 @@
 import { inject, observer, useLocalObservable } from 'mobx-react';
 import React, { FC } from 'react';
 import { sendReady } from '../../API/pairMessage';
+import useMatrix from '../../shared/hooks/matrix';
+import useWebsocket from '../../shared/hooks/websocket';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
 import SelectShipsPosition from './Field/SelectShipsPosition';
@@ -11,6 +13,8 @@ import { IProps } from './types';
 const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
   const mainStore = props.mainStore;
   const lobby = mainStore?.currentLobby;
+
+  const [dataMatrix, setMatrix] = useMatrix(lobby?.x as number, lobby?.y as number);
   
   const state = useLocalObservable(() => ({
     ships4n: lobby?.ships4n,
@@ -18,6 +22,7 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
     ships2n: lobby?.ships2n,
     ships1n: lobby?.ships1n,
     isReady: false,
+    opponentReady: false,
 
     decraseShip(shipSize: number) {
       //@ts-ignore
@@ -31,12 +36,29 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
 
     setReady() {
       state.isReady = true;
+    },
+
+    setOpponentReady() {
+      state.opponentReady = true;
     }
   }));
+
+  useWebsocket('ready', (data) => {
+    console.log('opp ready');
+    state.setOpponentReady();
+
+    if (state.isReady && state.opponentReady) {
+      mainStore?.setGameMatrix(dataMatrix);
+    }
+  });
 
   const handleReady = () => {
     state.setReady();
     sendReady();
+
+    if (state.isReady && state.opponentReady) {
+      mainStore?.setGameMatrix(dataMatrix);
+    }
   }
 
   let buttonReady = null;
@@ -50,7 +72,13 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
       <AppHeader>Set ships</AppHeader>
       <div className="d-flex">
         <div>
-          <TableField lobby={lobby as ILobbyStore} shipRestore={state.increseShip} disabled={state.isReady} />
+          <TableField 
+            lobby={lobby as ILobbyStore} 
+            shipRestore={state.increseShip} 
+            disabled={state.isReady} 
+            dataMatrix={dataMatrix}
+            setMatrix={setMatrix}  
+          />
         </div>
         <SelectShipsPosition state={state}>
           <ButtonReadyBlock>

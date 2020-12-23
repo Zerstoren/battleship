@@ -5,7 +5,3 @@ export const sendReady = () => {
     path: 'ready'
   });
 }
-
-client.on('message', (path: string, data: any) => {
-
-});

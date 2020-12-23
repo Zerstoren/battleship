@@ -2,13 +2,15 @@ import React, { FC, useState } from 'react';
 import { ILobbyStore } from '../../../../stores/lobby';
 import { FieldTable } from '../../styledComponents';
 import Cell from './Cell';
-import { matrix, matrixCheckCollision, matrixClearShadows, matrixRemoveChained, matrixSetErrShadow, matrixSetShadow, matrixSetShip } from './helperFn';
+import { matrixCheckCollision, matrixClearShadows, matrixRemoveChained, matrixSetErrShadow, matrixSetShadow, matrixSetShip } from './helperFn';
 import { IMatrix } from './types';
 
 interface IProp {
   shipRestore: (shipSize: number) => void,
   lobby: ILobbyStore,
   disabled: boolean,
+  dataMatrix: IMatrix,
+  setMatrix: React.Dispatch<React.SetStateAction<IMatrix>>
 }
 
 const letters: string[] = [
@@ -18,8 +20,7 @@ const letters: string[] = [
 ];
 
 const TableField: FC<IProp> = (props) => {
-  const {lobby , shipRestore, disabled} = props;
-  const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
+  const {lobby , shipRestore, disabled, dataMatrix, setMatrix} = props;
   const [[lastX, lastY], setPositions] = useState<[number, number]>([-1, -1]);
 
   const handleShipDrop = (x: number, y: number, shipSize: number) => {

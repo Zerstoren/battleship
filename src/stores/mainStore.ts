@@ -1,5 +1,6 @@
 import { getSnapshot, Instance, types } from "mobx-state-tree";
 import { GameStatus } from "../components/App/types";
+import { IMatrix, MatrixFill } from "../components/SetShips/Field/TableField/types";
 import { ILobbyStore, lobbyIndexes } from "./lobby";
 
 const LobbyElement = types.model("MainStore_LobyElement", lobbyIndexes);
@@ -15,6 +16,7 @@ const MainStore = types.model("MainStore", {
     GameStatus.GAMEOVER
   ]),
   currentLobby: types.maybeNull(LobbyElement),
+  gameMatrix: types.maybeNull(types.array(types.array(types.enumeration<MatrixFill>([MatrixFill.EMPTY, MatrixFill.SET])))),
   error: types.optional(types.string, ''),
 }).actions(self => ({
   setGameStatus(gameStatus: GameStatus) {
@@ -28,6 +30,11 @@ const MainStore = types.model("MainStore", {
       self.currentLobby = getSnapshot(lobby);
     }
   },
+  setGameMatrix(matrix: IMatrix) {
+    //@ts-ignore
+    self.gameMatrix = matrix;
+    self.status = GameStatus.GAME;
+  },
   setError(message: string) {
     self.error = message;
     self.status = GameStatus.MAIN
@@ -40,7 +47,9 @@ export {
   MainStore
 };
 
-export default MainStore.create({
+const mainStore = MainStore.create({
   status: GameStatus.MAIN,
   currentLobby: null
 });
+
+export default mainStore;
