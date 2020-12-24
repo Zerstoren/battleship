@@ -2,6 +2,7 @@ import { inject, observer } from 'mobx-react';
 import React, { FC } from 'react';
 import { ILobbyStore } from '../../stores/lobby';
 import CreateLobby from '../CreateLobby';
+import EndGameScreen from '../EndGameScreen';
 import Game from '../Game';
 import LobbyList from '../LobbyList';
 import Main from '../MainPage';
@@ -43,6 +44,11 @@ const App: FC<IAppProps> = inject("mainStore")(observer((props) => {
       
     case GameStatus.GAME:
       component = (<Game />);
+      break;
+
+    case GameStatus.GAMEWIN:
+    case GameStatus.GAMEOVER:
+      component = (<EndGameScreen gameResult={state?.status as GameStatus} />);
       break;
   }
 

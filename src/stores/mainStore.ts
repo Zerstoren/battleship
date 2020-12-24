@@ -1,4 +1,4 @@
-import { getSnapshot, Instance, types } from "mobx-state-tree";
+import { applySnapshot, getSnapshot, Instance, types } from "mobx-state-tree";
 import { FireTurn, GameStatus } from "../components/App/types";
 import { IMatrix, MatrixFill } from "../components/SetShips/Field/TableField/types";
 import { ILobbyStore, lobbyIndexes } from "./lobby";
@@ -13,7 +13,8 @@ const MainStore = types.model("MainStore", {
     GameStatus.WAIT_CONNECT,
     GameStatus.SET_SHIPS,
     GameStatus.GAME,
-    GameStatus.GAMEOVER
+    GameStatus.GAMEOVER,
+    GameStatus.GAMEWIN,
   ]),
   currentLobby: types.maybeNull(LobbyElement),
   gameMatrix: types.maybeNull(types.array(types.array(types.enumeration<MatrixFill>([MatrixFill.EMPTY, MatrixFill.SET])))),
@@ -42,6 +43,11 @@ const MainStore = types.model("MainStore", {
   setError(message: string) {
     self.error = message;
     self.status = GameStatus.MAIN
+  },
+  reset() {
+    applySnapshot(self, {
+      status: GameStatus.MAIN
+    });
   }
 }));
 

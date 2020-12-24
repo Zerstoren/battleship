@@ -45,7 +45,6 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
   }));
 
   useWebsocket('ready', (data) => {
-    console.log('opp ready');
     state.setOpponentReady();
 
     if (state.isReady && state.opponentReady) {
