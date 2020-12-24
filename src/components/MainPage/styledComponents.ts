@@ -6,3 +6,5 @@ export const ButtonSearchUser = styled.button.attrs(() => ({
 }))`
   margin: 0 12px;
 `;
+
+export const ButtonCreateLobby = styled(ButtonSearchUser)``;

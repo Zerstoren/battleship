@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { GameStatus, IProps } from '../App/types';
-import { ButtonSearchUser } from './styledComponents';
+import { ButtonCreateLobby, ButtonSearchUser } from './styledComponents';
 
 const Main: FC<IProps> = ({ handleChangeGameStatus: handleStartGame } : IProps) => (
   <>
@@ -11,9 +11,9 @@ const Main: FC<IProps> = ({ handleChangeGameStatus: handleStartGame } : IProps) 
         Search opponent
       </ButtonSearchUser>
 
-      <ButtonSearchUser onClick={() => handleStartGame(GameStatus.CREATE_LOBBY)}>
+      <ButtonCreateLobby onClick={() => handleStartGame(GameStatus.CREATE_LOBBY)}>
         Create lobby
-      </ButtonSearchUser>
+      </ButtonCreateLobby>
     </div>
   </>
 );

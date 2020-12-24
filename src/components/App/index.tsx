@@ -18,7 +18,6 @@ interface IAppProps {
 
 const App: FC<IAppProps> = inject('mainStore')(observer((props) => {
   const state = props.mainStore;
-
   const handleGameStart = (startGame: GameStatus) => state?.setGameStatus(startGame);
   const handleSetLobby = (startGame: GameStatus, lobby: ILobbyStore) => state?.setLobby(startGame, lobby);
   const handleWaitLobby = (

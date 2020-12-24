@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import client from '../../API/index';
 
-type ISendFn = (data: {path: string}) => void;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ISendFn = (data: any) => void;
 
 const useWebsocket = (path: string, fn?: ISendFn) : ISendFn => {
   useEffect(() => {
