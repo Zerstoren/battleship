@@ -1,20 +1,21 @@
 import { inject, observer, useLocalObservable } from 'mobx-react';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { sendReady } from '../../API/pairMessage';
-import useMatrix from '../../shared/hooks/matrix';
 import useWebsocket from '../../shared/hooks/websocket';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
 import SelectShipsPosition from './Field/SelectShipsPosition';
 import TableField from './Field/TableField';
+import { matrix } from './Field/TableField/helperFn';
+import { IMatrix } from './Field/TableField/types';
 import { ButtonReady, ButtonReadyBlock } from './styledComponents';
 import { IProps } from './types';
 
 const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
   const mainStore = props.mainStore;
   const lobby = mainStore?.currentLobby;
-
-  const [dataMatrix, setMatrix] = useMatrix(lobby?.x as number, lobby?.y as number);
+  
+  const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby?.x as number, lobby?.y as number));
   
   const state = useLocalObservable(() => ({
     ships4n: lobby?.ships4n,

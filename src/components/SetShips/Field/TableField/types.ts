@@ -5,6 +5,8 @@ export enum MatrixFill {
   SHADOW = 's',
   ERR_SHADOW = 'e',
   SET = 'w',
+  SET_KILL = 'k',
+  MISS = 'm',
 }
 
 export interface IMatrix extends Array<Array<MatrixFill>> {}

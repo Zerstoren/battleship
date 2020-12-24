@@ -1,5 +1,5 @@
 import { getSnapshot, Instance, types } from "mobx-state-tree";
-import { GameStatus } from "../components/App/types";
+import { FireTurn, GameStatus } from "../components/App/types";
 import { IMatrix, MatrixFill } from "../components/SetShips/Field/TableField/types";
 import { ILobbyStore, lobbyIndexes } from "./lobby";
 
@@ -17,6 +17,7 @@ const MainStore = types.model("MainStore", {
   ]),
   currentLobby: types.maybeNull(LobbyElement),
   gameMatrix: types.maybeNull(types.array(types.array(types.enumeration<MatrixFill>([MatrixFill.EMPTY, MatrixFill.SET])))),
+  fireTurn: types.optional(types.enumeration<FireTurn>('FireTurn', [FireTurn.NOBODY, FireTurn.ME, FireTurn.OPPONENT]), FireTurn.NOBODY),
   error: types.optional(types.string, ''),
 }).actions(self => ({
   setGameStatus(gameStatus: GameStatus) {
@@ -34,6 +35,9 @@ const MainStore = types.model("MainStore", {
     //@ts-ignore
     self.gameMatrix = matrix;
     self.status = GameStatus.GAME;
+  },
+  setFireTurn(fireTurn: FireTurn) {
+    self.fireTurn = fireTurn;
   },
   setError(message: string) {
     self.error = message;

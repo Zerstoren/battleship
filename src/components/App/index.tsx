@@ -2,6 +2,7 @@ import { inject, observer } from 'mobx-react';
 import React, { FC } from 'react';
 import { ILobbyStore } from '../../stores/lobby';
 import CreateLobby from '../CreateLobby';
+import Game from '../Game';
 import LobbyList from '../LobbyList';
 import Main from '../MainPage';
 import SetShips from '../SetShips';
@@ -38,6 +39,11 @@ const App: FC<IAppProps> = inject("mainStore")(observer((props) => {
 
     case GameStatus.SET_SHIPS:
       component = (<SetShips handleChangeGameStatus={handleGameStart} />);
+      break;
+      
+    case GameStatus.GAME:
+      component = (<Game />);
+      break;
   }
 
   let err = null;

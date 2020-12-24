@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import useLetters from '../../../../shared/hooks/letters';
 import { ILobbyStore } from '../../../../stores/lobby';
 import { FieldTable } from '../../styledComponents';
 import Cell from './Cell';
@@ -13,15 +14,10 @@ interface IProp {
   setMatrix: React.Dispatch<React.SetStateAction<IMatrix>>
 }
 
-const letters: string[] = [
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
-  'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
-  'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'X', 'Z'
-];
-
 const TableField: FC<IProp> = (props) => {
   const {lobby , shipRestore, disabled, dataMatrix, setMatrix} = props;
   const [[lastX, lastY], setPositions] = useState<[number, number]>([-1, -1]);
+  const letters = useLetters();
 
   const handleShipDrop = (x: number, y: number, shipSize: number) => {
     if (!matrixCheckCollision(dataMatrix, x, y, shipSize)) {

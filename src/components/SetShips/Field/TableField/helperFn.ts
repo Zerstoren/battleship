@@ -114,3 +114,27 @@ export const matrixSetErrShadow = (matrix: IMatrix, x: number, y: number, shipSi
 
 export const matrixSetShip = (matrix: IMatrix, x: number, y: number, shipSize: number) : IMatrix => 
   matrixSetFill(matrix, x, y, shipSize, MatrixFill.SET);
+
+export const matrixSetKillByPosition = (matrix: IMatrix, x: number, y: number) : IMatrix => {
+  const cloneMatrix = matrix.map(yLine => [...yLine]);
+  cloneMatrix[y][x] = MatrixFill.SET_KILL;
+  return cloneMatrix;
+}
+
+export const matrixSetMissByPosition = (matrix: IMatrix, x: number, y: number) : IMatrix => {
+  const cloneMatrix = matrix.map(yLine => [...yLine]);
+  cloneMatrix[y][x] = MatrixFill.MISS;
+  return cloneMatrix;
+}
+  
+export const matrixCountElements = (matrix: IMatrix, fill: MatrixFill) : number => {
+  return matrix.reduce((accumulator, yLine) => {
+    yLine.forEach(xLine => {
+      if (xLine === fill) {
+        accumulator += 1
+      }
+    })
+
+    return accumulator;
+  }, 0);
+}

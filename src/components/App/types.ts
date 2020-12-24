@@ -8,7 +8,14 @@ export enum GameStatus {
   WAIT_CONNECT = 'wait',
   SET_SHIPS = 'set_ships',
   GAME = 'game_process',
-  GAMEOVER = 'game_end',
+  GAMEOVER = 'game_loose',
+  GAMEWIN = 'game_win',
+}
+
+export enum FireTurn {
+  NOBODY = 'nobody',
+  ME = 'me',
+  OPPONENT = 'opponent',
 }
 
 export interface IGameState {
