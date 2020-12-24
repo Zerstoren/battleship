@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { useDrop } from "react-dnd";
-import { MatrixFill, DragObjectItem } from "./types";
+import React, { FC } from 'react';
+import { useDrop } from 'react-dnd';
+import { MatrixFill, DragObjectItem } from './types';
 
 interface IProps {
   onDropShip: (x: number, y: number, shipSize: number) => void,
@@ -13,28 +13,28 @@ interface IProps {
   disabled: boolean,
 }
 
-const Cell : FC<IProps> = (props) => {
-  const { onDropShip, onShadowShipDrop, onRemoveFromField, onCanDrop, x, y, fill, disabled } = props;
-  const [, drop] = useDrop<DragObjectItem, void, any>({
+const Cell : FC<IProps> = (props: IProps) => {
+  const {
+    onDropShip, onShadowShipDrop, onRemoveFromField, onCanDrop, x, y, fill, disabled,
+  } = props;
+  const [, drop] = useDrop<DragObjectItem, void, unknown>({
     accept: 'ship',
-    drop: (item, monitor) => {
+    drop: (item) => {
       onDropShip(x, y, item.size);
     },
 
-    hover: (item, monitor) => {
-      onShadowShipDrop(x, y, item.size)
+    hover: (item) => {
+      onShadowShipDrop(x, y, item.size);
     },
-    
-    canDrop: (item, monitor) => 
-      onCanDrop(x, y, item.size)
+
+    canDrop: (item) => onCanDrop(x, y, item.size),
   });
 
-  const handleClick = () =>
-    fill === MatrixFill.SET && onRemoveFromField(x, y)
+  const handleClick = () => fill === MatrixFill.SET && onRemoveFromField(x, y);
 
   let classNames = '';
 
-  switch(fill) {
+  switch (fill) {
     case MatrixFill.SHADOW:
       classNames = 'ship-shadow';
       break;
@@ -46,13 +46,16 @@ const Cell : FC<IProps> = (props) => {
     case MatrixFill.SET:
       classNames = 'ship-set';
       break;
+
+    default:
+      break;
   }
 
   if (classNames && disabled) {
     classNames = 'disabled';
   }
 
-  return (<td ref={drop} className={classNames} onClick={handleClick}></td>);
+  return (<td ref={drop} className={classNames} onClick={handleClick} />);
 };
 
 export default Cell;

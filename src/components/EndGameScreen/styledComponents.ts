@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const ButtonComplete = styled.button.attrs((props) => ({
-  className: 'btn btn-primary'
+export const ButtonComplete = styled.button.attrs(() => ({
+  className: 'btn btn-primary',
 }))``;

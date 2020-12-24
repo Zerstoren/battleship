@@ -1,6 +1,6 @@
-import { getSnapshot, Instance, SnapshotIn, SnapshotOut, types } from "mobx-state-tree";
-import { connectLobby, pubLobby } from "../API/lobby";
-import { IDataFromServer } from "../components/LobbyList/types";
+import {
+  getSnapshot, Instance, SnapshotIn, SnapshotOut, types,
+} from 'mobx-state-tree';
 
 export const lobbyIndexes = {
   lobbyName: types.identifier,
@@ -12,30 +12,35 @@ export const lobbyIndexes = {
   ships1n: types.optional(types.number, 4),
 };
 
-const LobbyStore = types.model('Lobby', lobbyIndexes).actions(self => {
-  return {
-    publishLobby() {
-      pubLobby(getSnapshot(self));
-    },
+const LobbyStore = types.model('Lobby', lobbyIndexes).actions((self) => ({
+  publishLobby() {
+    import('../API/lobby').then((apiLobby) => {
+      apiLobby.pubLobby(getSnapshot(self));
+    }).catch(() => {});
+  },
 
-    connectToLobby(userId: string) {
-      connectLobby(userId);
-    }
-  }
-});
+  connectToLobby(userId: string) {
+    import('../API/lobby').then((apiLobby) => {
+      apiLobby.connectLobby(userId);
+    }).catch(() => {});
+  },
+}));
 
-const LobbyElementsStores = types.model("LobbyElements", {
-  lobbys: types.array(LobbyStore)
-}).actions(self => ({
+const LobbyElementsStores = types.model('LobbyElements', {
+  lobbys: types.array(LobbyStore),
+}).actions((self) => ({
   addItems(data: IDataFromServer) {
-    self.lobbys.concat(Object.values(data))
-  }
+    self.lobbys.concat(Object.values(data));
+  },
 }));
 
 export const lobbyElementsStores = LobbyElementsStores.create();
 
+export type ILobbyStore = Instance<typeof LobbyStore>;
+export type ISnapshotInLobbyStore = SnapshotIn<typeof LobbyStore>;
+export type ISnapshotOutLobbyStore = SnapshotOut<typeof LobbyStore>;
+export interface IDataFromServer {
+  [key: string]: ISnapshotOutLobbyStore
+}
 
-export interface ILobbyStore extends Instance<typeof LobbyStore>{}
-export interface ISnapshotInLobbyStore extends SnapshotIn<typeof LobbyStore>{}
-export interface ISnapshotOutLobbyStore extends SnapshotOut<typeof LobbyStore>{}
 export default LobbyStore;

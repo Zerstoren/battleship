@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const shipColor = "rgba(0,0,0,0.25)";
+const shipColor = 'rgba(0,0,0,0.25)';
 
 export const ShipBlock = styled.div`
 width: 30px;
@@ -16,7 +16,7 @@ border-radius: 2px;
 `;
 
 export const Ship = styled.div.attrs((props) => ({
-  className: `d-flex ${props.className}`
+  className: `d-flex ${props.className as string}`,
 }))`
 
 ${ShipBlock} {

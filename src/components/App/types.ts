@@ -1,5 +1,4 @@
-import { ILobbyStore } from "../../stores/lobby";
-import { IMainStore } from "../../stores/mainStore";
+import { ILobbyStore } from '../../stores/lobby';
 
 export enum GameStatus {
   MAIN = 'main',
@@ -23,10 +22,6 @@ export interface IGameState {
   gameWithUser: boolean,
 
   setGameStatus: (status: GameStatus) => void,
-}
-
-export interface IAppProps {
-  mainStore?: IMainStore
 }
 
 export interface IProps {

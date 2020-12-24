@@ -1,34 +1,36 @@
 import { useEffect } from 'react';
 import client from '../../API/index';
 
-const useWebsocket = (path: string, fn?: (data: any) => void) => {
+type ISendFn = (data: {path: string}) => void;
+
+const useWebsocket = (path: string, fn?: ISendFn) : ISendFn => {
   useEffect(() => {
     if (!fn) {
-      return;
+      return () => null;
     }
 
-    const onMessage = (pairPath: string, data: any) => {
+    const onMessage = (pairPath: string, data: {path: string}) => {
       if (pairPath !== 'pairGet') return;
-      if (data['path'] === path) {
+      if (data.path === path) {
         fn(data);
-      } 
+      }
     };
 
     client.on('message', onMessage);
 
-    return () => {
+    return () : void => {
       client.off('message', onMessage);
-    }
+    };
   }, [path, fn]);
 
-  return (data: any) => {
-    const dataSend = {
+  return (data: Record<string, unknown>) => {
+    const dataSend: {path: string} = {
       ...data,
-      path: path
+      path,
     };
 
     client.send('pairSend', dataSend);
-  }
+  };
 };
 
 export default useWebsocket;

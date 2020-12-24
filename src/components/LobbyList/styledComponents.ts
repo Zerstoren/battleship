@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const LobbyTable = styled.table.attrs(props => ({
-  className: 'table table-striped table-hover'
+export const LobbyTable = styled.table.attrs(() => ({
+  className: 'table table-striped table-hover',
 }))``;

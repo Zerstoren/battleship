@@ -8,36 +8,35 @@ interface IProp {
   disabled: boolean,
 }
 
-const ShipElement : FC<IProp> = (props) => {
+const ShipElement : FC<IProp> = (props: IProp) => {
   const { shipSize, onDragComplete, disabled } = props;
   const [, drag] = useDrag({
-    item: {type: `ship`, size: shipSize},
+    item: { type: 'ship', size: shipSize },
     end: (item, monitor) => {
       if (monitor.didDrop()) {
         onDragComplete();
       }
-    }
+    },
   });
 
   const items: JSX.Element[] = [];
 
-  for(let i = 0; i < shipSize; i++) {
+  for (let i = 0; i < shipSize; i++) {
     items.push(<ShipBlock key={`ship_size_element_${i}`} />);
   }
 
   if (disabled) {
     return (
-      <Ship className='disabled'>
-        {items}
-      </Ship>
-    )
-  } else {
-    return (
-      <Ship ref={drag}>
+      <Ship className="disabled">
         {items}
       </Ship>
     );
   }
-}
+  return (
+    <Ship ref={drag}>
+      {items}
+    </Ship>
+  );
+};
 
 export default ShipElement;

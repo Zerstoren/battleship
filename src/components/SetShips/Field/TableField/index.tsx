@@ -3,7 +3,9 @@ import useLetters from '../../../../shared/hooks/letters';
 import { ILobbyStore } from '../../../../stores/lobby';
 import { FieldTable } from '../../styledComponents';
 import Cell from './Cell';
-import { matrixCheckCollision, matrixClearShadows, matrixRemoveChained, matrixSetErrShadow, matrixSetShadow, matrixSetShip } from './helperFn';
+import {
+  matrixCheckCollision, matrixClearShadows, matrixRemoveChained, matrixSetErrShadow, matrixSetShadow, matrixSetShip,
+} from './helperFn';
 import { IMatrix } from './types';
 
 interface IProp {
@@ -14,8 +16,10 @@ interface IProp {
   setMatrix: React.Dispatch<React.SetStateAction<IMatrix>>
 }
 
-const TableField: FC<IProp> = (props) => {
-  const {lobby , shipRestore, disabled, dataMatrix, setMatrix} = props;
+const TableField: FC<IProp> = (props: IProp) => {
+  const {
+    lobby, shipRestore, disabled, dataMatrix, setMatrix,
+  } = props;
   const [[lastX, lastY], setPositions] = useState<[number, number]>([-1, -1]);
   const letters = useLetters();
 
@@ -30,10 +34,10 @@ const TableField: FC<IProp> = (props) => {
         matrixClearShadows(dataMatrix),
         x,
         y,
-        shipSize
-      )
+        shipSize,
+      ),
     );
-  }
+  };
 
   const handleShadowDrop = (x: number, y: number, shipSize: number) => {
     if (x === lastX && y === lastY) {
@@ -47,37 +51,35 @@ const TableField: FC<IProp> = (props) => {
         matrixClearShadows(dataMatrix),
         x,
         y,
-        shipSize
-      )
+        shipSize,
+      ),
     );
-  }
+  };
 
   const handleRemove = (x: number, y: number) => {
     const [matrix, shipSize] = matrixRemoveChained(dataMatrix, x, y);
     setMatrix(
-      matrix
+      matrix,
     );
-    shipRestore(shipSize)
-  }
+    shipRestore(shipSize);
+  };
 
-  const handleCanDrop = (x: number, y: number, shipSize: number) => {
-    return matrixCheckCollision(dataMatrix, x, y, shipSize)
-  }
+  const handleCanDrop = (x: number, y: number, shipSize: number) => matrixCheckCollision(dataMatrix, x, y, shipSize);
 
-  let tr: JSX.Element[] = [];
-  let theadTd: JSX.Element[] = [<td key="empty"></td>];
+  const tr: JSX.Element[] = [];
+  const theadTd: JSX.Element[] = [<td key="empty" />];
 
   for (let y = 0; y < lobby.y; y++) {
-    let td: JSX.Element[] = [<td key={`head-${y}`}>{y+1}</td>];
+    const td: JSX.Element[] = [<td key={`head-${y}`}>{y + 1}</td>];
 
     for (let x = 0; x < lobby.x; x++) {
-      td.push(<Cell 
-        key={`${y}-${x}`} 
+      td.push(<Cell
+        key={`${y}-${x}`}
         fill={dataMatrix[y][x]}
-        x={x} 
-        y={y} 
+        x={x}
+        y={y}
         disabled={disabled}
-        onDropShip={handleShipDrop} 
+        onDropShip={handleShipDrop}
         onShadowShipDrop={handleShadowDrop}
         onRemoveFromField={handleRemove}
         onCanDrop={handleCanDrop}
@@ -90,7 +92,7 @@ const TableField: FC<IProp> = (props) => {
   for (let x = 0; x < lobby.x; x++) {
     theadTd.push(<td key={`head-${x}`}>{letters[x]}</td>);
   }
-  
+
   return (
     <>
       <FieldTable sizeX={lobby.x} sizeY={lobby.y}>

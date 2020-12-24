@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import { GameStatus } from "../App/types";
-import { AppHeader } from "../../shared/StyledComponents/Headers";
-import { inject } from "mobx-react";
-import { IMainStore } from "../../stores/mainStore";
-import { ButtonComplete } from "./styledComponents";
+import React, { FC } from 'react';
+import { inject } from 'mobx-react';
+import { GameStatus } from '../App/types';
+import { AppHeader } from '../../shared/StyledComponents/Headers';
+import { IMainStore } from '../../stores/mainStore';
+import { ButtonComplete } from './styledComponents';
 
 interface IProps {
   mainStore?: IMainStore,
@@ -11,11 +11,11 @@ interface IProps {
 }
 
 const EndGameScreen: FC<IProps> = inject('mainStore')((props) => {
-  const {gameResult, mainStore} = props;
+  const { gameResult, mainStore } = props;
 
   const handleToMainPage = () => {
     mainStore?.reset();
-  }
+  };
 
   return (
     <>

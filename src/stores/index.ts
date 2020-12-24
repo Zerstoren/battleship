@@ -1,15 +1,15 @@
-import MainStore, { IMainStore } from './mainStore';
+import mainStore, { IMainStore } from './mainStore';
 
 interface IStore {
-  mainStore: IMainStore 
-};
+  mainStore: IMainStore
+}
 
 const Stores: IStore = {
-  mainStore: MainStore,
+  mainStore,
 };
 
 export type {
-  IStore
-}
+  IStore,
+};
 
 export default Stores;

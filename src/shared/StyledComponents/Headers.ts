@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const AppHeader = styled.h1.attrs(props => ({
-  className: 'display-3'
+export const AppHeader = styled.h1.attrs(() => ({
+  className: 'display-3',
 }))``;

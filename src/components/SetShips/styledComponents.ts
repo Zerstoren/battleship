@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const shipColor = "rgba(0,0,255,0.25)";
-const shipShadowColor = "rgba(0,0,255,0.12)";
-const shipErrShadowColor = "rgba(255,0,0,0.12)";
+const shipColor = 'rgba(0,0,255,0.25)';
+const shipShadowColor = 'rgba(0,0,255,0.12)';
+const shipErrShadowColor = 'rgba(255,0,0,0.12)';
 
 interface FieldTableProps {
   sizeX: number,
   sizeY: number,
 }
 
-export const FieldTable = styled.table.attrs((props) => ({
-  className: "table table-bordered"
+export const FieldTable = styled.table.attrs(() => ({
+  className: 'table table-bordered',
 }))`
 width: ${(props: FieldTableProps) => (props.sizeX + 1) * 30}px;
 height: ${(props: FieldTableProps) => (props.sizeY + 1) * 30}px;
@@ -40,8 +40,8 @@ export const ShipBlockPadding = styled.div`
 padding-left: 25px;
 `;
 
-export const ShipBlockElement = styled.div.attrs((props) => ({
-  className: 'd-flex'
+export const ShipBlockElement = styled.div.attrs(() => ({
+  className: 'd-flex',
 }))`
 padding: 10px 0;
 
@@ -54,6 +54,6 @@ export const ButtonReadyBlock = styled.div`
 text-align: left;
 `;
 
-export const ButtonReady = styled.button.attrs((props) => ({
-  className: 'btn btn-primary'
-}))``
+export const ButtonReady = styled.button.attrs(() => ({
+  className: 'btn btn-primary',
+}))``;

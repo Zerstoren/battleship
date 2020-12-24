@@ -1,4 +1,4 @@
-import {connect} from 'socket.io-client';
+import { connect } from 'socket.io-client';
 
 const client = connect('ws://localhost:8080');
 

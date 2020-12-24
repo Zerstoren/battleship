@@ -11,12 +11,12 @@ import { IMatrix } from './Field/TableField/types';
 import { ButtonReady, ButtonReadyBlock } from './styledComponents';
 import { IProps } from './types';
 
-const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
-  const mainStore = props.mainStore;
+const SetShips: FC<IProps> = inject('mainStore')(observer((props: IProps) => {
+  const { mainStore } = props;
   const lobby = mainStore?.currentLobby;
-  
+
   const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby?.x as number, lobby?.y as number));
-  
+
   const state = useLocalObservable(() => ({
     ships4n: lobby?.ships4n,
     ships3n: lobby?.ships3n,
@@ -26,12 +26,13 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
     opponentReady: false,
 
     decraseShip(shipSize: number) {
-      //@ts-ignore
+      // @ts-expect-error: TS can associate state with dynamic object
       state[`ships${shipSize}n`] = state[`ships${shipSize}n`] - 1;
     },
 
     increseShip(shipSize: number) {
-      //@ts-ignore
+      // @ts-expect-error: TS can associate state with dynamic object
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       state[`ships${shipSize}n`] = state[`ships${shipSize}n`] + 1;
     },
 
@@ -41,10 +42,10 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
 
     setOpponentReady() {
       state.opponentReady = true;
-    }
+    },
   }));
 
-  useWebsocket('ready', (data) => {
+  useWebsocket('ready', () => {
     state.setOpponentReady();
 
     if (state.isReady && state.opponentReady) {
@@ -59,7 +60,7 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
     if (state.isReady && state.opponentReady) {
       mainStore?.setGameMatrix(dataMatrix);
     }
-  }
+  };
 
   let buttonReady = null;
 
@@ -72,15 +73,21 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
       <AppHeader>Set ships</AppHeader>
       <div className="d-flex">
         <div>
-          <TableField 
-            lobby={lobby as ILobbyStore} 
-            shipRestore={state.increseShip} 
-            disabled={state.isReady} 
+          <TableField
+            lobby={lobby as ILobbyStore}
+            shipRestore={(n: number) => state.increseShip(n)}
+            disabled={state.isReady}
             dataMatrix={dataMatrix}
-            setMatrix={setMatrix}  
+            setMatrix={setMatrix}
           />
         </div>
-        <SelectShipsPosition state={state}>
+        <SelectShipsPosition
+          ships4n={state.ships4n as number}
+          ships3n={state.ships3n as number}
+          ships2n={state.ships2n as number}
+          ships1n={state.ships1n as number}
+          decraseShip={(n: number) => state.decraseShip(n)}
+        >
           <ButtonReadyBlock>
             {buttonReady}
           </ButtonReadyBlock>
@@ -89,6 +96,5 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props) => {
     </>
   );
 }));
-
 
 export default SetShips;

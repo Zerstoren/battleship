@@ -1,4 +1,4 @@
-import { DragObjectWithType } from "react-dnd/lib/interfaces/hooksApi";
+import { DragObjectWithType } from 'react-dnd/lib/interfaces/hooksApi';
 
 export enum MatrixFill {
   EMPTY = '',
@@ -9,7 +9,7 @@ export enum MatrixFill {
   MISS = 'm',
 }
 
-export interface IMatrix extends Array<Array<MatrixFill>> {}
+export type IMatrix = Array<Array<MatrixFill>>;
 
 export interface DragObjectItem extends DragObjectWithType {
   size: number

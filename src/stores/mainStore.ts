@@ -1,11 +1,13 @@
-import { applySnapshot, getSnapshot, Instance, types } from "mobx-state-tree";
-import { FireTurn, GameStatus } from "../components/App/types";
-import { IMatrix, MatrixFill } from "../components/SetShips/Field/TableField/types";
-import { ILobbyStore, lobbyIndexes } from "./lobby";
+import {
+  applySnapshot, getSnapshot, Instance, types,
+} from 'mobx-state-tree';
+import { FireTurn, GameStatus } from '../components/App/types';
+import { IMatrix, MatrixFill } from '../components/SetShips/Field/TableField/types';
+import { ILobbyStore, lobbyIndexes } from './lobby';
 
-const LobbyElement = types.model("MainStore_LobyElement", lobbyIndexes);
+const LobbyElement = types.model('MainStore_LobyElement', lobbyIndexes);
 
-const MainStore = types.model("MainStore", {
+const MainStore = types.model('MainStore', {
   status: types.enumeration<GameStatus>('GameStatus', [
     GameStatus.MAIN,
     GameStatus.CREATE_LOBBY,
@@ -17,10 +19,19 @@ const MainStore = types.model("MainStore", {
     GameStatus.GAMEWIN,
   ]),
   currentLobby: types.maybeNull(LobbyElement),
-  gameMatrix: types.maybeNull(types.array(types.array(types.enumeration<MatrixFill>([MatrixFill.EMPTY, MatrixFill.SET])))),
-  fireTurn: types.optional(types.enumeration<FireTurn>('FireTurn', [FireTurn.NOBODY, FireTurn.ME, FireTurn.OPPONENT]), FireTurn.NOBODY),
+  gameMatrix: types.maybeNull(
+    types.array(
+      types.array(
+        types.enumeration<MatrixFill>([MatrixFill.EMPTY, MatrixFill.SET]),
+      ),
+    ),
+  ),
+  fireTurn: types.optional(
+    types.enumeration<FireTurn>('FireTurn', [FireTurn.NOBODY, FireTurn.ME, FireTurn.OPPONENT]),
+    FireTurn.NOBODY,
+  ),
   error: types.optional(types.string, ''),
-}).actions(self => ({
+}).actions((self) => ({
   setGameStatus(gameStatus: GameStatus) {
     self.status = gameStatus;
   },
@@ -33,7 +44,7 @@ const MainStore = types.model("MainStore", {
     }
   },
   setGameMatrix(matrix: IMatrix) {
-    //@ts-ignore
+    // @ts-expect-error: Same data but have difference types description
     self.gameMatrix = matrix;
     self.status = GameStatus.GAME;
   },
@@ -42,24 +53,24 @@ const MainStore = types.model("MainStore", {
   },
   setError(message: string) {
     self.error = message;
-    self.status = GameStatus.MAIN
+    self.status = GameStatus.MAIN;
   },
   reset() {
     applySnapshot(self, {
-      status: GameStatus.MAIN
+      status: GameStatus.MAIN,
     });
-  }
+  },
 }));
 
-export interface IMainStore extends Instance<typeof MainStore>{};
+export type IMainStore = Instance<typeof MainStore>;
 
 export {
-  MainStore
+  MainStore,
 };
 
 const mainStore = MainStore.create({
   status: GameStatus.MAIN,
-  currentLobby: null
+  currentLobby: null,
 });
 
 export default mainStore;

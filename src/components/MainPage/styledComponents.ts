@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const ButtonSearchUser = styled.button.attrs(props => ({
+export const ButtonSearchUser = styled.button.attrs(() => ({
   type: 'button',
-  className: 'btn btn-secondary'
+  className: 'btn btn-secondary',
 }))`
   margin: 0 12px;
 `;

@@ -1,14 +1,12 @@
-import { ISnapshotOutLobbyStore } from "../../stores/lobby";
-import { FormErrors, FormInputData } from "./types";
+import { ISnapshotOutLobbyStore } from '../../stores/lobby';
+import { FormErrors, FormInputData } from './types';
 
 export const calculateRequredFieldSize = (
-  ships4n: number, 
-  ships3n: number, 
-  ships2n: number, 
-  ships1n: number
-) : number => {
-  return Number(((ships4n * 4) + (ships3n * 3) + (ships2n * 2) + (ships1n * 1)) * 1.65);
-}
+  ships4n: number,
+  ships3n: number,
+  ships2n: number,
+  ships1n: number,
+) : number => Number(((ships4n * 4) + (ships3n * 3) + (ships2n * 2) + (ships1n * 1)) * 1.65);
 
 export const convertFormDataToModel = (values: FormInputData) : ISnapshotOutLobbyStore => ({
   lobbyName: values.lobbyName,
@@ -20,7 +18,7 @@ export const convertFormDataToModel = (values: FormInputData) : ISnapshotOutLobb
   ships4n: Number.parseInt(values.ships4n),
 });
 
-export const onValidate = (formData: FormInputData) => {
+export const onValidate = (formData: FormInputData) : FormErrors => {
   const err: FormErrors = {};
   const fields = convertFormDataToModel(formData);
 
@@ -40,7 +38,9 @@ export const onValidate = (formData: FormInputData) => {
     err.y = 'Field is too long';
   }
 
-  if ((fields.x * fields.y) < calculateRequredFieldSize(fields.ships4n, fields.ships3n, fields.ships2n, fields.ships1n)) {
+  if (
+    (fields.x * fields.y) < calculateRequredFieldSize(fields.ships4n, fields.ships3n, fields.ships2n, fields.ships1n)
+  ) {
     err.shipsCount = 'Need less ships';
     err.ships4n = 'Need less ships';
     err.ships3n = 'Need less ships';
@@ -49,4 +49,4 @@ export const onValidate = (formData: FormInputData) => {
   }
 
   return err;
-}
+};

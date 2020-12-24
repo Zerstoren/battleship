@@ -5,14 +5,14 @@ interface FieldTableProps {
   sizeY: number,
 }
 
-const shipColor = "rgba(0,0,255,0.25)";
+const shipColor = 'rgba(0,0,255,0.25)';
 
-export const FlexGameField = styled.div.attrs((props) => ({
-  className: 'd-flex'
+export const FlexGameField = styled.div.attrs(() => ({
+  className: 'd-flex',
 }))``;
 
-export const MyGameField = styled.table.attrs<FieldTableProps>((props) => ({
-  className: 'table table-bordered'
+export const MyGameField = styled.table.attrs<FieldTableProps>(() => ({
+  className: 'table table-bordered',
 }))`
 width: ${(props: FieldTableProps) => (props.sizeX + 1) * 30}px;
 height: ${(props: FieldTableProps) => (props.sizeY + 1) * 30}px;
