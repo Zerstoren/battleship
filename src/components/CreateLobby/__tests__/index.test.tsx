@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {html} from 'js-beautify';
 import CreateLobby from '..';
 import { GameStatus } from '../../App/types';
 
@@ -9,7 +8,7 @@ describe('CreateLobby', () => {
     const mockCallback = jest.fn((state, lobby) => null);
 
     const tree = mount(<CreateLobby handleChangeGameStatus={mockCallback} />);
-    expect(html(tree.html())).toMatchSnapshot();
+    expect(tree.debug()).toMatchSnapshot();
 
     tree.find('input[name="lobbyName"]').simulate("change", { target: { value: "Whooo" }})
     tree.find('input[name="x"]').simulate("change", { target: { value: "20" }})
@@ -38,7 +37,7 @@ describe('CreateLobby', () => {
     tree.find('button.btn-primary').simulate('click');
     expect(mockCallback.mock.calls.length).toBe(0);
     expect(tree.find('input.is-invalid').length).toBe(1);
-    expect(html(tree.html())).toMatchSnapshot();
+    expect(tree.debug()).toMatchSnapshot();
   });
 
   test('Check validation field size', () => {
@@ -51,7 +50,7 @@ describe('CreateLobby', () => {
     tree.find('button.btn-primary').simulate('click');
     expect(mockCallback.mock.calls.length).toBe(0);
     expect(tree.find('input.is-invalid').length).toBe(6);
-    expect(html(tree.html())).toMatchSnapshot();
+    expect(tree.debug()).toMatchSnapshot();
   });
 
   test('Check validation ships size', () => {
@@ -63,7 +62,7 @@ describe('CreateLobby', () => {
     tree.find('button.btn-primary').simulate('click');
     expect(mockCallback.mock.calls.length).toBe(0);
     expect(tree.find('input.is-invalid').length).toBe(4);
-    expect(html(tree.html())).toMatchSnapshot();
+    expect(tree.debug()).toMatchSnapshot();
   });
 });
 

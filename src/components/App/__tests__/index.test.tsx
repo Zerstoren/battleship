@@ -2,7 +2,7 @@ import { Provider } from 'mobx-react';
 import React from 'react';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 import App from '..';
 import { MainStore } from '../../../stores/mainStore';
 import { matrix } from "../../SetShips/Field/TableField/helperFn";
@@ -14,8 +14,8 @@ describe('App snapshots', () => {
       status: GameStatus.MAIN
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check create lobby', () => {
@@ -23,8 +23,8 @@ describe('App snapshots', () => {
       status: GameStatus.CREATE_LOBBY
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check lobby list', () => {
@@ -32,8 +32,8 @@ describe('App snapshots', () => {
       status: GameStatus.LOBBY_LIST
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check wait connect', () => {
@@ -41,8 +41,8 @@ describe('App snapshots', () => {
       status: GameStatus.WAIT_CONNECT
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check set ships', () => {
@@ -59,14 +59,14 @@ describe('App snapshots', () => {
       }
     });
     
-    const wrapper = renderer.create(
+    const wrapper = mount(
       <Provider mainStore={mainStore}>
         <DndProvider backend={HTML5Backend}>
           <App />
         </DndProvider>
       </Provider>
     );
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check game', () => {
@@ -84,8 +84,8 @@ describe('App snapshots', () => {
       }
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check game win', () => {
@@ -93,8 +93,8 @@ describe('App snapshots', () => {
       status: GameStatus.GAMEWIN
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('Check game over', () => {
@@ -102,7 +102,7 @@ describe('App snapshots', () => {
       status: GameStatus.GAMEOVER
     });
     
-    const wrapper = renderer.create(<Provider mainStore={mainStore}><App /></Provider>);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 })

@@ -1,1767 +1,1213 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App snapshots Check create lobby 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    New Lobby
-  </h1>
-  <div
-    className="sc-gsTCUz hIfhYJ"
-  >
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        autoFocus={true}
-        className="sc-hKgILt form-control false"
-        name="lobbyName"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Lobby Name
-      </label>
-    </div>
-  </div>
-  <div
-    className="sc-gsTCUz hIfhYJ d-flex justify-content-between"
-  >
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        className="sc-hKgILt form-control undefined"
-        name="x"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="number"
-        value={10}
-      />
-      <label>
-        Field size: X
-      </label>
-    </div>
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        className="sc-hKgILt form-control undefined"
-        name="y"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="number"
-        value={10}
-      />
-      <label>
-        Field size: Y
-      </label>
-    </div>
-  </div>
-  <div
-    className="sc-gsTCUz hIfhYJ d-flex justify-content-between"
-  >
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        className="sc-hKgILt form-control undefined"
-        name="ships4n"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="number"
-        value={1}
-      />
-      <label>
-        4x ships count
-      </label>
-    </div>
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        className="sc-hKgILt form-control undefined"
-        name="ships3n"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="number"
-        value={2}
-      />
-      <label>
-        3x ships count
-      </label>
-    </div>
-  </div>
-  <div
-    className="sc-gsTCUz hIfhYJ d-flex justify-content-between"
-  >
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        className="sc-hKgILt form-control undefined"
-        name="ships2n"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="number"
-        value={3}
-      />
-      <label>
-        2x ships count
-      </label>
-    </div>
-    <div
-      className="sc-dlfnbm form-floating"
-    >
-      <input
-        className="sc-hKgILt form-control undefined"
-        name="ships1n"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="number"
-        value={4}
-      />
-      <label>
-        1x ships count
-      </label>
-    </div>
-  </div>
-  <div
-    className="sc-gsTCUz hIfhYJ d-flex justify-content-evenly"
-  >
-    <button
-      className="btn btn-secondary"
-      onClick={[Function]}
-    >
-      Back
-    </button>
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-    >
-      Create lobby
-    </button>
-  </div>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <CreateLobby handleChangeGameStatus={[Function: handleWaitLobby]}>
+            <ReactFinalForm initialValues={{...}} onSubmit={[Function: handleSubmit]} validate={[Function: onValidate]} render={[Function: render]}>
+              <styled.h1>
+                <h1 className=\\"sc-bdfBwQ display-3\\">
+                  New Lobby
+                </h1>
+              </styled.h1>
+              <styled.div>
+                <div className=\\"sc-gsTCUz hIfhYJ\\">
+                  <ForwardRef(Field) name=\\"lobbyName\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input name=\\"lobbyName\\" value=\\"\\" checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} className={false} type=\\"text\\" autoFocus={true}>
+                          <input name=\\"lobbyName\\" value=\\"\\" checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} className=\\"sc-hKgILt form-control false\\" type=\\"text\\" autoFocus={true} />
+                        </styled.input>
+                        <label>
+                          Lobby Name
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                </div>
+              </styled.div>
+              <styled.div className=\\"d-flex justify-content-between\\">
+                <div className=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+                  <ForwardRef(Field) name=\\"x\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input type=\\"number\\" className={[undefined]} name=\\"x\\" value={10} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]}>
+                          <input type=\\"number\\" className=\\"sc-hKgILt form-control undefined\\" name=\\"x\\" value={10} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} />
+                        </styled.input>
+                        <label>
+                          Field size: X
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                  <ForwardRef(Field) name=\\"y\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input type=\\"number\\" className={[undefined]} name=\\"y\\" value={10} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]}>
+                          <input type=\\"number\\" className=\\"sc-hKgILt form-control undefined\\" name=\\"y\\" value={10} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} />
+                        </styled.input>
+                        <label>
+                          Field size: Y
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                </div>
+              </styled.div>
+              <styled.div className=\\"d-flex justify-content-between\\">
+                <div className=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+                  <ForwardRef(Field) name=\\"ships4n\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input className={[undefined]} type=\\"number\\" name=\\"ships4n\\" value={1} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]}>
+                          <input className=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships4n\\" value={1} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} />
+                        </styled.input>
+                        <label>
+                          4x ships count
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                  <ForwardRef(Field) name=\\"ships3n\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input className={[undefined]} type=\\"number\\" name=\\"ships3n\\" value={2} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]}>
+                          <input className=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships3n\\" value={2} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} />
+                        </styled.input>
+                        <label>
+                          3x ships count
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                </div>
+              </styled.div>
+              <styled.div className=\\"d-flex justify-content-between\\">
+                <div className=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+                  <ForwardRef(Field) name=\\"ships2n\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input className={[undefined]} type=\\"number\\" name=\\"ships2n\\" value={3} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]}>
+                          <input className=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships2n\\" value={3} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} />
+                        </styled.input>
+                        <label>
+                          2x ships count
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                  <ForwardRef(Field) name=\\"ships1n\\">
+                    <styled.div>
+                      <div className=\\"sc-dlfnbm form-floating\\">
+                        <styled.input className={[undefined]} type=\\"number\\" name=\\"ships1n\\" value={4} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]}>
+                          <input className=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships1n\\" value={4} checked={[undefined]} onBlur={[Function (anonymous)]} onChange={[Function (anonymous)]} onFocus={[Function (anonymous)]} />
+                        </styled.input>
+                        <label>
+                          1x ships count
+                        </label>
+                      </div>
+                    </styled.div>
+                  </ForwardRef(Field)>
+                </div>
+              </styled.div>
+              <styled.div className=\\"d-flex justify-content-evenly\\">
+                <div className=\\"sc-gsTCUz hIfhYJ d-flex justify-content-evenly\\">
+                  <button className=\\"btn btn-secondary\\" onClick={[Function: backToMainPage]}>
+                    Back
+                  </button>
+                  <button className=\\"btn btn-primary\\" onClick={[Function: handleSubmit]}>
+                    Create lobby
+                  </button>
+                </div>
+              </styled.div>
+            </ReactFinalForm>
+          </CreateLobby>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check game 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    Fight
-  </h1>
-  <div
-    className="sc-jSgupP d-flex"
-  >
-    <table
-      className="sc-gKsewC sc-iBPRYJ hPxzGb twbZX table table-bordered"
-    >
-      <thead>
-        <tr>
-          <td />
-          <td>
-            A
-          </td>
-          <td>
-            B
-          </td>
-          <td>
-            C
-          </td>
-          <td>
-            D
-          </td>
-          <td>
-            E
-          </td>
-          <td>
-            F
-          </td>
-          <td>
-            G
-          </td>
-          <td>
-            H
-          </td>
-          <td>
-            I
-          </td>
-          <td>
-            J
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            1
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            2
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            3
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            4
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            5
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            6
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            7
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            8
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            9
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-        <tr>
-          <td>
-            10
-          </td>
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-          <td
-            className=""
-            onClick={[Function]}
-          />
-        </tr>
-      </tbody>
-    </table>
-    <table
-      className="sc-gKsewC hPxzGb table table-bordered"
-    >
-      <thead>
-        <tr>
-          <td />
-          <td>
-            A
-          </td>
-          <td>
-            B
-          </td>
-          <td>
-            C
-          </td>
-          <td>
-            D
-          </td>
-          <td>
-            E
-          </td>
-          <td>
-            F
-          </td>
-          <td>
-            G
-          </td>
-          <td>
-            H
-          </td>
-          <td>
-            I
-          </td>
-          <td>
-            J
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            1
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            2
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            3
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            4
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            5
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            6
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            7
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            8
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            9
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-        <tr>
-          <td>
-            10
-          </td>
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-          <td
-            className=""
-          />
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <inject-with-mainStore(Object)>
+            <inject-with-mainStore(Object) mainStore={{...}}>
+              <styled.h1>
+                <h1 className=\\"sc-bdfBwQ display-3\\">
+                  Fight
+                </h1>
+              </styled.h1>
+              <styled.div>
+                <div className=\\"sc-jSgupP d-flex\\">
+                  <Styled(styled.table) sizeX={10} sizeY={10}>
+                    <table className=\\"sc-gKsewC sc-iBPRYJ hPxzGb twbZX table table-bordered\\">
+                      <OpponentField lobby={{...}} matrix={{...}} handleFire={{...}}>
+                        <thead>
+                          <tr>
+                            <td />
+                            <td>
+                              A
+                            </td>
+                            <td>
+                              B
+                            </td>
+                            <td>
+                              C
+                            </td>
+                            <td>
+                              D
+                            </td>
+                            <td>
+                              E
+                            </td>
+                            <td>
+                              F
+                            </td>
+                            <td>
+                              G
+                            </td>
+                            <td>
+                              H
+                            </td>
+                            <td>
+                              I
+                            </td>
+                            <td>
+                              J
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              1
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              2
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              3
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              4
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              5
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              6
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              7
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              8
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              9
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                          <tr>
+                            <td>
+                              10
+                            </td>
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" onClick={[Function: onClick]} />
+                          </tr>
+                        </tbody>
+                      </OpponentField>
+                    </table>
+                  </Styled(styled.table)>
+                  <styled.table sizeX={10} sizeY={10}>
+                    <table className=\\"sc-gKsewC hPxzGb table table-bordered\\">
+                      <MyField lobby={{...}} matrix={{...}}>
+                        <thead>
+                          <tr>
+                            <td />
+                            <td>
+                              A
+                            </td>
+                            <td>
+                              B
+                            </td>
+                            <td>
+                              C
+                            </td>
+                            <td>
+                              D
+                            </td>
+                            <td>
+                              E
+                            </td>
+                            <td>
+                              F
+                            </td>
+                            <td>
+                              G
+                            </td>
+                            <td>
+                              H
+                            </td>
+                            <td>
+                              I
+                            </td>
+                            <td>
+                              J
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              1
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              2
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              3
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              4
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              5
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              6
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              7
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              8
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              9
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                          <tr>
+                            <td>
+                              10
+                            </td>
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                            <td className=\\"\\" />
+                          </tr>
+                        </tbody>
+                      </MyField>
+                    </table>
+                  </styled.table>
+                </div>
+              </styled.div>
+            </inject-with-mainStore(Object)>
+          </inject-with-mainStore(Object)>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check game over 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    You are loose
-  </h1>
-  <button
-    className="sc-eCssSg btn btn-primary"
-    onClick={[Function]}
-  >
-    To main menu
-  </button>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <inject-with-mainStore(Function) gameResult=\\"game_loose\\">
+            <Component gameResult=\\"game_loose\\" mainStore={{...}}>
+              <styled.h1>
+                <h1 className=\\"sc-bdfBwQ display-3\\">
+                  You are loose
+                </h1>
+              </styled.h1>
+              <styled.button onClick={[Function: handleToMainPage]}>
+                <button onClick={[Function: handleToMainPage]} className=\\"sc-eCssSg btn btn-primary\\">
+                  To main menu
+                </button>
+              </styled.button>
+            </Component>
+          </inject-with-mainStore(Function)>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check game win 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    You are win
-  </h1>
-  <button
-    className="sc-eCssSg btn btn-primary"
-    onClick={[Function]}
-  >
-    To main menu
-  </button>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <inject-with-mainStore(Function) gameResult=\\"game_win\\">
+            <Component gameResult=\\"game_win\\" mainStore={{...}}>
+              <styled.h1>
+                <h1 className=\\"sc-bdfBwQ display-3\\">
+                  You are win
+                </h1>
+              </styled.h1>
+              <styled.button onClick={[Function: handleToMainPage]}>
+                <button onClick={[Function: handleToMainPage]} className=\\"sc-eCssSg btn btn-primary\\">
+                  To main menu
+                </button>
+              </styled.button>
+            </Component>
+          </inject-with-mainStore(Function)>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check lobby list 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    Lobby list
-  </h1>
-  <table
-    className="sc-fubCfw table table-striped table-hover"
-  >
-    <thead>
-      <tr>
-        <td />
-        <td>
-          Lobby name
-        </td>
-        <td>
-          Field size
-        </td>
-        <td>
-          Ships 4x/3x/2x/1x
-        </td>
-      </tr>
-    </thead>
-    <tbody />
-  </table>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <Memo(wrappedComponent) handleSetLobby={[Function: handleSetLobby]}>
+            <styled.h1>
+              <h1 className=\\"sc-bdfBwQ display-3\\">
+                Lobby list
+              </h1>
+            </styled.h1>
+            <styled.table>
+              <table className=\\"sc-fubCfw table table-striped table-hover\\">
+                <thead>
+                  <tr>
+                    <td />
+                    <td>
+                      Lobby name
+                    </td>
+                    <td>
+                      Field size
+                    </td>
+                    <td>
+                      Ships 4x/3x/2x/1x
+                    </td>
+                  </tr>
+                </thead>
+                <tbody />
+              </table>
+            </styled.table>
+          </Memo(wrappedComponent)>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check main page 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    Battleship
-  </h1>
-  <div>
-    <button
-      className="sc-pFZIQ fwORzk btn btn-secondary"
-      onClick={[Function]}
-      type="button"
-    >
-      Search opponent
-    </button>
-    <button
-      className="sc-pFZIQ sc-jrAGrp fwORzk btn btn-secondary"
-      onClick={[Function]}
-      type="button"
-    >
-      Create lobby
-    </button>
-  </div>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <Main handleChangeGameStatus={[Function: handleGameStart]}>
+            <styled.h1>
+              <h1 className=\\"sc-bdfBwQ display-3\\">
+                Battleship
+              </h1>
+            </styled.h1>
+            <div>
+              <styled.button onClick={[Function: onClick]}>
+                <button onClick={[Function: onClick]} type=\\"button\\" className=\\"sc-pFZIQ fwORzk btn btn-secondary\\">
+                  Search opponent
+                </button>
+              </styled.button>
+              <Styled(styled.button) onClick={[Function: onClick]}>
+                <button onClick={[Function: onClick]} type=\\"button\\" className=\\"sc-pFZIQ sc-jrAGrp fwORzk btn btn-secondary\\">
+                  Create lobby
+                </button>
+              </Styled(styled.button)>
+            </div>
+          </Main>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check set ships 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    Set ships
-  </h1>
-  <div
-    className="d-flex"
-  >
-    <div>
-      <table
-        className="sc-kEjbxe jokKlb table table-bordered"
-      >
-        <thead>
-          <tr>
-            <td />
-            <td>
-              A
-            </td>
-            <td>
-              B
-            </td>
-            <td>
-              C
-            </td>
-            <td>
-              D
-            </td>
-            <td>
-              E
-            </td>
-            <td>
-              F
-            </td>
-            <td>
-              G
-            </td>
-            <td>
-              H
-            </td>
-            <td>
-              I
-            </td>
-            <td>
-              J
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              1
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              2
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              3
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              4
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              5
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              6
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              7
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              8
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              9
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-          <tr>
-            <td>
-              10
-            </td>
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-            <td
-              className=""
-              onClick={[Function]}
-            />
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div
-      className="sc-iqHYGH erCuwz"
-    >
-      <div
-        className="sc-crrsfI hCyPpV d-flex"
-      >
-        <div
-          className="sc-hBEYos gFwwHG d-flex undefined"
-        >
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-        </div>
-        <span>
-           
-          x
-          1
-        </span>
-      </div>
-      <div
-        className="sc-crrsfI hCyPpV d-flex"
-      >
-        <div
-          className="sc-hBEYos gFwwHG d-flex undefined"
-        >
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-        </div>
-        <span>
-           
-          x
-          1
-        </span>
-      </div>
-      <div
-        className="sc-crrsfI hCyPpV d-flex"
-      >
-        <div
-          className="sc-hBEYos gFwwHG d-flex undefined"
-        >
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-        </div>
-        <span>
-           
-          x
-          1
-        </span>
-      </div>
-      <div
-        className="sc-crrsfI hCyPpV d-flex"
-      >
-        <div
-          className="sc-hBEYos gFwwHG d-flex undefined"
-        >
-          <div
-            className="sc-kstrdz cLMXsX"
-          />
-        </div>
-        <span>
-           
-          x
-          1
-        </span>
-      </div>
-      <div
-        className="sc-dQppl dijAIy"
-      />
-    </div>
-  </div>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <DndProvider backend={[Function: createBackend]}>
+    <inject-with-mainStore(Object)>
+      <inject-with-mainStore(Object) mainStore={{...}}>
+        <styled.div>
+          <div className=\\"sc-fodVxV gZZuTH\\">
+            <inject-with-mainStore(Object) handleChangeGameStatus={[Function: handleGameStart]}>
+              <inject-with-mainStore(Object) handleChangeGameStatus={[Function: handleGameStart]} mainStore={{...}}>
+                <styled.h1>
+                  <h1 className=\\"sc-bdfBwQ display-3\\">
+                    Set ships
+                  </h1>
+                </styled.h1>
+                <div className=\\"d-flex\\">
+                  <div>
+                    <TableField lobby={{...}} shipRestore={[Function: shipRestore]} disabled={false} dataMatrix={{...}} setMatrix={[Function: bound dispatchAction]}>
+                      <styled.table sizeX={10} sizeY={10}>
+                        <table className=\\"sc-kEjbxe jokKlb table table-bordered\\">
+                          <thead>
+                            <tr>
+                              <td />
+                              <td>
+                                A
+                              </td>
+                              <td>
+                                B
+                              </td>
+                              <td>
+                                C
+                              </td>
+                              <td>
+                                D
+                              </td>
+                              <td>
+                                E
+                              </td>
+                              <td>
+                                F
+                              </td>
+                              <td>
+                                G
+                              </td>
+                              <td>
+                                H
+                              </td>
+                              <td>
+                                I
+                              </td>
+                              <td>
+                                J
+                              </td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                1
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                2
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                3
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                4
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                5
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                6
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                7
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                8
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                9
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                            <tr>
+                              <td>
+                                10
+                              </td>
+                              <Cell fill=\\"\\" x={0} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={1} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={2} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={3} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={4} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={5} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={6} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={7} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={8} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                              <Cell fill=\\"\\" x={9} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
+                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              </Cell>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </styled.table>
+                    </TableField>
+                  </div>
+                  <Memo(wrappedComponent) ships4n={1} ships3n={1} ships2n={1} ships1n={1} decraseShip={[Function: decraseShip]}>
+                    <styled.div>
+                      <div className=\\"sc-iqHYGH erCuwz\\">
+                        <styled.div>
+                          <div className=\\"sc-crrsfI hCyPpV d-flex\\">
+                            <ShipElement shipSize={4} disabled={false} onDragComplete={[Function: onDragComplete]}>
+                              <styled.div>
+                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                </div>
+                              </styled.div>
+                            </ShipElement>
+                            <span>
+                               
+                              x
+                              1
+                            </span>
+                          </div>
+                        </styled.div>
+                        <styled.div>
+                          <div className=\\"sc-crrsfI hCyPpV d-flex\\">
+                            <ShipElement shipSize={3} disabled={false} onDragComplete={[Function: onDragComplete]}>
+                              <styled.div>
+                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                </div>
+                              </styled.div>
+                            </ShipElement>
+                            <span>
+                               
+                              x
+                              1
+                            </span>
+                          </div>
+                        </styled.div>
+                        <styled.div>
+                          <div className=\\"sc-crrsfI hCyPpV d-flex\\">
+                            <ShipElement shipSize={2} disabled={false} onDragComplete={[Function: onDragComplete]}>
+                              <styled.div>
+                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                </div>
+                              </styled.div>
+                            </ShipElement>
+                            <span>
+                               
+                              x
+                              1
+                            </span>
+                          </div>
+                        </styled.div>
+                        <styled.div>
+                          <div className=\\"sc-crrsfI hCyPpV d-flex\\">
+                            <ShipElement shipSize={1} disabled={false} onDragComplete={[Function: onDragComplete]}>
+                              <styled.div>
+                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                                  <styled.div>
+                                    <div className=\\"sc-kstrdz cLMXsX\\" />
+                                  </styled.div>
+                                </div>
+                              </styled.div>
+                            </ShipElement>
+                            <span>
+                               
+                              x
+                              1
+                            </span>
+                          </div>
+                        </styled.div>
+                        <styled.div>
+                          <div className=\\"sc-dQppl dijAIy\\" />
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </Memo(wrappedComponent)>
+                </div>
+              </inject-with-mainStore(Object)>
+            </inject-with-mainStore(Object)>
+          </div>
+        </styled.div>
+      </inject-with-mainStore(Object)>
+    </inject-with-mainStore(Object)>
+  </DndProvider>
+</MobXProvider>"
 `;
 
 exports[`App snapshots Check wait connect 1`] = `
-<div
-  className="sc-fodVxV gZZuTH"
->
-  <h1
-    className="sc-bdfBwQ display-3"
-  >
-    Wait connect
-  </h1>
-  <button
-    className="btn btn-warning"
-    onClick={[Function]}
-  >
-    Discard
-  </button>
-</div>
+"<MobXProvider mainStore={{...}}>
+  <inject-with-mainStore(Object)>
+    <inject-with-mainStore(Object) mainStore={{...}}>
+      <styled.div>
+        <div className=\\"sc-fodVxV gZZuTH\\">
+          <WaitConnect handleChangeGameStatus={[Function: handleGameStart]}>
+            <styled.h1>
+              <h1 className=\\"sc-bdfBwQ display-3\\">
+                Wait connect
+              </h1>
+            </styled.h1>
+            <button className=\\"btn btn-warning\\" onClick={[Function: stopProcessing]}>
+              Discard
+            </button>
+          </WaitConnect>
+        </div>
+      </styled.div>
+    </inject-with-mainStore(Object)>
+  </inject-with-mainStore(Object)>
+</MobXProvider>"
 `;
