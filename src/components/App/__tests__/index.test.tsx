@@ -1,14 +1,12 @@
-import { shallow } from "enzyme";
 import { Provider } from 'mobx-react';
-import renderer from 'react-test-renderer';
 import React from 'react';
-import App from '..';
-import { MainStore } from '../../../stores/mainStore';
-import Main from "../../MainPage";
-import { GameStatus } from '../types';
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import renderer from 'react-test-renderer';
+import App from '..';
+import { MainStore } from '../../../stores/mainStore';
 import { matrix } from "../../SetShips/Field/TableField/helperFn";
+import { GameStatus } from '../types';
 
 describe('App snapshots', () => {
   it('Check main page', () => {

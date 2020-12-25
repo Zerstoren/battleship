@@ -38,10 +38,10 @@ const CreateLobby: FC<IProps> = ({ handleChangeGameStatus } : IProps) => {
               {({ input, meta }) => (
                 <FormFloating>
                   <FloatingInput
+                    {...input}
                     className={(meta.error && meta.touched && 'is-invalid') as string}
                     type="text"
                     autoFocus
-                    {...input}
                   />
                   <label>{(meta.error && meta.touched) ? meta.error : 'Lobby Name'}</label>
                 </FormFloating>

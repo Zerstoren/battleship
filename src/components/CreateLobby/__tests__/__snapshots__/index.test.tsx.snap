@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateLobby Check validation field size 1`] = `
+"<h1 class=\\"sc-bdfBwQ display-3\\">New Lobby</h1>
+<div class=\\"sc-gsTCUz hIfhYJ\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input name=\\"lobbyName\\" class=\\"sc-hKgILt form-control undefined\\" type=\\"text\\" value=\\"Whooo\\"><label>Lobby Name</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt is-invalid form-control is-invalid\\" name=\\"x\\" value=\\"1\\"><label>Field is too short</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt is-invalid form-control is-invalid\\" name=\\"y\\" value=\\"1\\"><label>Field is too short</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships4n\\" value=\\"1\\"><label>Need less ships</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships3n\\" value=\\"2\\"><label>Need less ships</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships2n\\" value=\\"3\\"><label>Need less ships</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships1n\\" value=\\"4\\"><label>Need less ships</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-evenly\\"><button class=\\"btn btn-secondary\\">Back</button><button class=\\"btn btn-primary\\">Create lobby</button></div>"
+`;
+
+exports[`CreateLobby Check validation name 1`] = `
+"<h1 class=\\"sc-bdfBwQ display-3\\">New Lobby</h1>
+<div class=\\"sc-gsTCUz hIfhYJ\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input name=\\"lobbyName\\" class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"text\\" value=\\"\\"><label>Lobby name is required</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt form-control undefined\\" name=\\"x\\" value=\\"10\\"><label>Field size: X</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt form-control undefined\\" name=\\"y\\" value=\\"10\\"><label>Field size: Y</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships4n\\" value=\\"1\\"><label>4x ships count</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships3n\\" value=\\"2\\"><label>3x ships count</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships2n\\" value=\\"3\\"><label>2x ships count</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships1n\\" value=\\"4\\"><label>1x ships count</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-evenly\\"><button class=\\"btn btn-secondary\\">Back</button><button class=\\"btn btn-primary\\">Create lobby</button></div>"
+`;
+
+exports[`CreateLobby Check validation ships size 1`] = `
+"<h1 class=\\"sc-bdfBwQ display-3\\">New Lobby</h1>
+<div class=\\"sc-gsTCUz hIfhYJ\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input name=\\"lobbyName\\" class=\\"sc-hKgILt form-control undefined\\" type=\\"text\\" value=\\"Whooo\\"><label>Lobby Name</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt form-control undefined\\" name=\\"x\\" value=\\"10\\"><label>Field size: X</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt form-control undefined\\" name=\\"y\\" value=\\"10\\"><label>Field size: Y</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships4n\\" value=\\"22\\"><label>Need less ships</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships3n\\" value=\\"2\\"><label>Need less ships</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships2n\\" value=\\"3\\"><label>Need less ships</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt is-invalid form-control is-invalid\\" type=\\"number\\" name=\\"ships1n\\" value=\\"4\\"><label>Need less ships</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-evenly\\"><button class=\\"btn btn-secondary\\">Back</button><button class=\\"btn btn-primary\\">Create lobby</button></div>"
+`;
+
+exports[`CreateLobby Type all data 1`] = `
+"<h1 class=\\"sc-bdfBwQ display-3\\">New Lobby</h1>
+<div class=\\"sc-gsTCUz hIfhYJ\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input name=\\"lobbyName\\" class=\\"sc-hKgILt form-control false\\" type=\\"text\\" value=\\"\\"><label>Lobby Name</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt form-control undefined\\" name=\\"x\\" value=\\"10\\"><label>Field size: X</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input type=\\"number\\" class=\\"sc-hKgILt form-control undefined\\" name=\\"y\\" value=\\"10\\"><label>Field size: Y</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships4n\\" value=\\"1\\"><label>4x ships count</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships3n\\" value=\\"2\\"><label>3x ships count</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-between\\">
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships2n\\" value=\\"3\\"><label>2x ships count</label></div>
+    <div class=\\"sc-dlfnbm form-floating\\"><input class=\\"sc-hKgILt form-control undefined\\" type=\\"number\\" name=\\"ships1n\\" value=\\"4\\"><label>1x ships count</label></div>
+</div>
+<div class=\\"sc-gsTCUz hIfhYJ d-flex justify-content-evenly\\"><button class=\\"btn btn-secondary\\">Back</button><button class=\\"btn btn-primary\\">Create lobby</button></div>"
+`;
