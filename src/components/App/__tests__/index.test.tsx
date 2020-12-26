@@ -7,6 +7,7 @@ import App from '..';
 import { MainStore } from '../../../stores/mainStore';
 import { matrix } from "../../SetShips/Field/TableField/helperFn";
 import { GameStatus } from '../types';
+import { LobbyList } from '../../../stores/lobbyList';
 
 describe('App snapshots', () => {
   it('Check main page', () => {
@@ -28,11 +29,12 @@ describe('App snapshots', () => {
   });
 
   it('Check lobby list', () => {
-    let mainStore = MainStore.create({
+    const mainStore = MainStore.create({
       status: GameStatus.LOBBY_LIST
     });
+    const lobbyList = LobbyList.create();
     
-    const wrapper = mount(<Provider mainStore={mainStore}><App /></Provider>);
+    const wrapper = mount(<Provider mainStore={mainStore} lobbyList={lobbyList}><App /></Provider>);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 

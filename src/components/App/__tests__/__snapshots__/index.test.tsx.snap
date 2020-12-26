@@ -599,37 +599,39 @@ exports[`App snapshots Check game win 1`] = `
 `;
 
 exports[`App snapshots Check lobby list 1`] = `
-"<MobXProvider mainStore={{...}}>
+"<MobXProvider mainStore={{...}} lobbyList={{...}}>
   <inject-with-mainStore(Object)>
     <inject-with-mainStore(Object) mainStore={{...}}>
       <styled.div>
         <div className=\\"sc-fodVxV gZZuTH\\">
-          <Memo(wrappedComponent) handleSetLobby={[Function: handleSetLobby]}>
-            <styled.h1>
-              <h1 className=\\"sc-bdfBwQ display-3\\">
-                Lobby list
-              </h1>
-            </styled.h1>
-            <styled.table>
-              <table className=\\"sc-fubCfw table table-striped table-hover\\">
-                <thead>
-                  <tr>
-                    <td />
-                    <td>
-                      Lobby name
-                    </td>
-                    <td>
-                      Field size
-                    </td>
-                    <td>
-                      Ships 4x/3x/2x/1x
-                    </td>
-                  </tr>
-                </thead>
-                <tbody />
-              </table>
-            </styled.table>
-          </Memo(wrappedComponent)>
+          <inject-with-lobbyList(Object) handleSetLobby={[Function: handleSetLobby]}>
+            <inject-with-lobbyList(Object) handleSetLobby={[Function: handleSetLobby]} lobbyList={{...}}>
+              <styled.h1>
+                <h1 className=\\"sc-bdfBwQ display-3\\">
+                  Lobby list
+                </h1>
+              </styled.h1>
+              <styled.table>
+                <table className=\\"sc-fubCfw table table-striped table-hover\\">
+                  <thead>
+                    <tr>
+                      <td />
+                      <td>
+                        Lobby name
+                      </td>
+                      <td>
+                        Field size
+                      </td>
+                      <td>
+                        Ships 4x/3x/2x/1x
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody />
+                </table>
+              </styled.table>
+            </inject-with-lobbyList(Object)>
+          </inject-with-lobbyList(Object)>
         </div>
       </styled.div>
     </inject-with-mainStore(Object)>

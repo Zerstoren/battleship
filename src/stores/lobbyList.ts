@@ -1,4 +1,4 @@
-import { applySnapshot, types } from 'mobx-state-tree';
+import { applySnapshot, Instance, types } from 'mobx-state-tree';
 import LobbyStore, { IDataFromServer } from './lobby';
 
 const LobbyElement = types.model('LobbyElement', {
@@ -40,5 +40,5 @@ const lobbyList = LobbyList.create();
 export {
   LobbyList,
 };
-
+export type ILobbyList = Instance<typeof LobbyList>;
 export default lobbyList;

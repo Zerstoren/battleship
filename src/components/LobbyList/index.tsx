@@ -1,26 +1,33 @@
-import { observer } from 'mobx-react-lite';
+import { observer, inject } from 'mobx-react';
 import React, { FC, useEffect } from 'react';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
-import lobbyList from '../../stores/lobbyList';
+import { ILobbyList } from '../../stores/lobbyList';
 import { GameStatus, ISetLobbyProps } from '../App/types';
 import { LobbyTable } from './styledComponents';
 
-const LobbyList: FC<ISetLobbyProps> = observer((props) => {
+interface IProps extends ISetLobbyProps {
+  lobbyList?: ILobbyList
+}
+
+const LobbyList: FC<IProps> = inject('lobbyList')(observer((props: IProps) => {
+  const lobbyList = props.lobbyList as ILobbyList;
+  const { handleSetLobby } = props;
+
   useEffect(() => {
     lobbyList.lobbyList();
-  }, []);
+  }, [lobbyList]);
 
   const handleJoin = (user: string, lobby: ILobbyStore) => {
     lobby.connectToLobby(user);
-    props.handleSetLobby(
+    handleSetLobby(
       GameStatus.SET_SHIPS,
       lobby,
     );
   };
 
   const items: JSX.Element[] = [];
-  const values = lobbyList.lobbys.values();
+  const values = lobbyList?.lobbys.values();
   for (const record of values) {
     items.push(
       <tr key={record.name}>
@@ -65,6 +72,6 @@ const LobbyList: FC<ISetLobbyProps> = observer((props) => {
       </LobbyTable>
     </>
   );
-});
+}));
 
 export default LobbyList;
