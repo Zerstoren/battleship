@@ -27,8 +27,7 @@ const LobbyList: FC<IProps> = inject('lobbyList')(observer((props: IProps) => {
   };
 
   const items: JSX.Element[] = [];
-  const values = lobbyList?.lobbys.values();
-  for (const record of values) {
+  for (const record of lobbyList?.lobbys.values()) {
     items.push(
       <tr key={record.name}>
         <td>

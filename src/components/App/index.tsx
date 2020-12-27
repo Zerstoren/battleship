@@ -17,19 +17,19 @@ interface IAppProps {
 }
 
 const App: FC<IAppProps> = inject('mainStore')(observer((props) => {
-  const state = props.mainStore;
+  const state = props.mainStore as IMainStore;
   const handleGameStart = (startGame: GameStatus) => state?.setGameStatus(startGame);
   const handleSetLobby = (startGame: GameStatus, lobby: ILobbyStore) => state?.setLobby(startGame, lobby);
   const handleWaitLobby = (
     startGame: GameStatus,
     lobby: ILobbyStore | null = null,
-  ) => state?.setLobby(startGame, lobby);
+  ) => state.setLobby(startGame, lobby);
 
   const handleAcceptError = () => state?.setError('');
 
   let component = null;
 
-  switch (state?.status) {
+  switch (state.status) {
     case GameStatus.MAIN:
       component = (<Main handleChangeGameStatus={handleGameStart} />);
       break;
@@ -55,7 +55,7 @@ const App: FC<IAppProps> = inject('mainStore')(observer((props) => {
 
     case GameStatus.GAMEWIN:
     case GameStatus.GAMEOVER:
-      component = (<EndGameScreen gameResult={state?.status as GameStatus} />);
+      component = (<EndGameScreen gameResult={state.status as GameStatus} />);
       break;
 
     default:

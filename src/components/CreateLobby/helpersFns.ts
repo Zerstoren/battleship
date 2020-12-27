@@ -22,7 +22,7 @@ export const onValidate = (formData: FormInputData) : FormErrors => {
   const err: FormErrors = {};
   const fields = convertFormDataToModel(formData);
 
-  if (!fields.lobbyName?.length) {
+  if (!fields.lobbyName.length) {
     err.lobbyName = 'Lobby name is required';
   }
 
