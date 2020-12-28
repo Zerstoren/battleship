@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import useLetters from '../../../shared/hooks/letters';
-import { ILobbyStore } from '../../../stores/lobby';
-import { IMatrix, MatrixFill } from '../../SetShips/Field/TableField/types';
+import useLetters from '../../shared/hooks/letters';
+import { ILobbyStore } from '../../stores/lobby';
+import { IMatrix, MatrixFill } from '../SetShips/Field/TableField/types';
 
 interface IProps {
   lobby: ILobbyStore,

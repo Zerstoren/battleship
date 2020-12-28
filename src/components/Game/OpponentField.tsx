@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import useLetters from '../../../shared/hooks/letters';
-import { ILobbyStore } from '../../../stores/lobby';
-import { IMatrix, MatrixFill } from '../../SetShips/Field/TableField/types';
+import useLetters from '../../shared/hooks/letters';
+import { ILobbyStore } from '../../stores/lobby';
+import { IMatrix, MatrixFill } from '../SetShips/Field/TableField/types';
 
 interface IProps {
   lobby: ILobbyStore,
@@ -36,6 +36,8 @@ const OpponentField: FC<IProps> = (props: IProps) => {
 
       td.push(<td
         className={classNames}
+        data-x={x}
+        data-y={y}
         onClick={() => handleClick(x, y)}
         key={`${y}-${x}`}
       />);

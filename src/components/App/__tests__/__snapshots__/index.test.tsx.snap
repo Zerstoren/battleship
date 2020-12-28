@@ -190,151 +190,151 @@ exports[`App snapshots Check game 1`] = `
                             <td>
                               1
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={0} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={0} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               2
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={1} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={1} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               3
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={2} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={2} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               4
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={3} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={3} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               5
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={4} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={4} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               6
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={5} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={5} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               7
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={6} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={6} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               8
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={7} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={7} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               9
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={8} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={8} onClick={[Function: onClick]} />
                           </tr>
                           <tr>
                             <td>
                               10
                             </td>
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
-                            <td className=\\"\\" onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={0} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={1} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={2} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={3} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={4} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={5} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={6} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={7} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={8} data-y={9} onClick={[Function: onClick]} />
+                            <td className=\\"\\" data-x={9} data-y={9} onClick={[Function: onClick]} />
                           </tr>
                         </tbody>
                       </OpponentField>
