@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import { useDrop } from 'react-dnd';
+import { DropTargetMonitor, useDrop } from 'react-dnd';
 import { MatrixFill, DragObjectItem } from './types';
 
 interface IProps {
   onDropShip: (x: number, y: number, shipSize: number) => void,
   onShadowShipDrop: (x: number, y: number, shipSize: number) => void,
   onRemoveFromField: (x: number, y: number) => void,
-  onCanDrop: (x: number, y: number, shipSize: number) => boolean,
   fill: MatrixFill,
   x: number,
   y: number,
@@ -15,10 +14,14 @@ interface IProps {
 
 const Cell : FC<IProps> = (props: IProps) => {
   const {
-    onDropShip, onShadowShipDrop, onRemoveFromField, onCanDrop, x, y, fill, disabled,
+    onDropShip, onShadowShipDrop, onRemoveFromField, x, y, fill, disabled,
   } = props;
-  const [, drop] = useDrop<DragObjectItem, void, unknown>({
+  const [collectedProps, drop] = useDrop<DragObjectItem, void, Record<string, string>>({
     accept: 'ship',
+    collect: (monitor: DropTargetMonitor): Record<string, string> => ({
+      monitorId: monitor.getHandlerId() as string,
+    }),
+
     drop: (item) => {
       onDropShip(x, y, item.size);
     },
@@ -26,8 +29,6 @@ const Cell : FC<IProps> = (props: IProps) => {
     hover: (item) => {
       onShadowShipDrop(x, y, item.size);
     },
-
-    canDrop: (item) => onCanDrop(x, y, item.size),
   });
 
   const handleClick = () => fill === MatrixFill.SET && onRemoveFromField(x, y);
@@ -55,7 +56,7 @@ const Cell : FC<IProps> = (props: IProps) => {
     classNames = 'disabled';
   }
 
-  return (<td ref={drop} className={classNames} onClick={handleClick} />);
+  return (<td ref={drop} data-monitorid={collectedProps.monitorId} className={classNames} onClick={handleClick} />);
 };
 
 export default Cell;

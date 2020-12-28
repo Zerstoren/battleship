@@ -730,350 +730,350 @@ exports[`App snapshots Check set ships 1`] = `
                               <td>
                                 1
                               </td>
-                              <Cell fill=\\"\\" x={0} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T0\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T1\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T2\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T3\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T4\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T5\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T6\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T7\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T8\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={0} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T9\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 2
                               </td>
-                              <Cell fill=\\"\\" x={0} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T10\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T11\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T12\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T13\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T14\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T15\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T16\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T17\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T18\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={1} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T19\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 3
                               </td>
-                              <Cell fill=\\"\\" x={0} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T20\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T21\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T22\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T23\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T24\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T25\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T26\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T27\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T28\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={2} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T29\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 4
                               </td>
-                              <Cell fill=\\"\\" x={0} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T30\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T31\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T32\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T33\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T34\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T35\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T36\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T37\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T38\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={3} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T39\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 5
                               </td>
-                              <Cell fill=\\"\\" x={0} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T40\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T41\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T42\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T43\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T44\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T45\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T46\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T47\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T48\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={4} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T49\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 6
                               </td>
-                              <Cell fill=\\"\\" x={0} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T50\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T51\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T52\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T53\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T54\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T55\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T56\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T57\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T58\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={5} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T59\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 7
                               </td>
-                              <Cell fill=\\"\\" x={0} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T60\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T61\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T62\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T63\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T64\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T65\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T66\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T67\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T68\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={6} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T69\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 8
                               </td>
-                              <Cell fill=\\"\\" x={0} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T70\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T71\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T72\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T73\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T74\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T75\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T76\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T77\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T78\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={7} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T79\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 9
                               </td>
-                              <Cell fill=\\"\\" x={0} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T80\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T81\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T82\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T83\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T84\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T85\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T86\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T87\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T88\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={8} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T89\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                             <tr>
                               <td>
                                 10
                               </td>
-                              <Cell fill=\\"\\" x={0} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={0} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T90\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={1} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={1} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T91\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={2} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={2} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T92\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={3} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={3} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T93\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={4} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={4} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T94\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={5} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={5} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T95\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={6} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={6} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T96\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={7} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={7} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T97\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={8} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={8} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T98\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
-                              <Cell fill=\\"\\" x={9} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]} onCanDrop={[Function: handleCanDrop]}>
-                                <td className=\\"\\" onClick={[Function: handleClick]} />
+                              <Cell fill=\\"\\" x={9} y={9} disabled={false} onDropShip={[Function: handleShipDrop]} onShadowShipDrop={[Function: handleShadowDrop]} onRemoveFromField={[Function: handleRemove]}>
+                                <td data-monitorid=\\"T99\\" className=\\"\\" onClick={[Function: handleClick]} />
                               </Cell>
                             </tr>
                           </tbody>
@@ -1087,8 +1087,8 @@ exports[`App snapshots Check set ships 1`] = `
                         <styled.div>
                           <div className=\\"sc-crrsfI hCyPpV d-flex\\">
                             <ShipElement shipSize={4} disabled={false} onDragComplete={[Function: onDragComplete]}>
-                              <styled.div>
-                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                              <styled.div data-monitorid=\\"S100\\">
+                                <div data-monitorid=\\"S100\\" className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
                                   <styled.div>
                                     <div className=\\"sc-kstrdz cLMXsX\\" />
                                   </styled.div>
@@ -1114,8 +1114,8 @@ exports[`App snapshots Check set ships 1`] = `
                         <styled.div>
                           <div className=\\"sc-crrsfI hCyPpV d-flex\\">
                             <ShipElement shipSize={3} disabled={false} onDragComplete={[Function: onDragComplete]}>
-                              <styled.div>
-                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                              <styled.div data-monitorid=\\"S101\\">
+                                <div data-monitorid=\\"S101\\" className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
                                   <styled.div>
                                     <div className=\\"sc-kstrdz cLMXsX\\" />
                                   </styled.div>
@@ -1138,8 +1138,8 @@ exports[`App snapshots Check set ships 1`] = `
                         <styled.div>
                           <div className=\\"sc-crrsfI hCyPpV d-flex\\">
                             <ShipElement shipSize={2} disabled={false} onDragComplete={[Function: onDragComplete]}>
-                              <styled.div>
-                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                              <styled.div data-monitorid=\\"S102\\">
+                                <div data-monitorid=\\"S102\\" className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
                                   <styled.div>
                                     <div className=\\"sc-kstrdz cLMXsX\\" />
                                   </styled.div>
@@ -1159,8 +1159,8 @@ exports[`App snapshots Check set ships 1`] = `
                         <styled.div>
                           <div className=\\"sc-crrsfI hCyPpV d-flex\\">
                             <ShipElement shipSize={1} disabled={false} onDragComplete={[Function: onDragComplete]}>
-                              <styled.div>
-                                <div className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
+                              <styled.div data-monitorid=\\"S103\\">
+                                <div data-monitorid=\\"S103\\" className=\\"sc-hBEYos gFwwHG d-flex undefined\\">
                                   <styled.div>
                                     <div className=\\"sc-kstrdz cLMXsX\\" />
                                   </styled.div>

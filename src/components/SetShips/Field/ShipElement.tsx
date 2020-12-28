@@ -10,8 +10,11 @@ interface IProp {
 
 const ShipElement : FC<IProp> = (props: IProp) => {
   const { shipSize, onDragComplete, disabled } = props;
-  const [, drag] = useDrag({
+  const [collectedProps, drag] = useDrag({
     item: { type: 'ship', size: shipSize },
+    collect: (monitor): Record<string, string> => ({
+      monitorId: monitor.getHandlerId() as string,
+    }),
     end: (item, monitor) => {
       if (monitor.didDrop()) {
         onDragComplete();
@@ -33,7 +36,7 @@ const ShipElement : FC<IProp> = (props: IProp) => {
     );
   }
   return (
-    <Ship ref={drag}>
+    <Ship ref={drag} data-monitorid={collectedProps.monitorId}>
       {items}
     </Ship>
   );

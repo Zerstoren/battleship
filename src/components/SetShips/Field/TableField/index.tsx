@@ -64,8 +64,6 @@ const TableField: FC<IProp> = (props: IProp) => {
     shipRestore(shipSize);
   };
 
-  const handleCanDrop = (x: number, y: number, shipSize: number) => matrixCheckCollision(dataMatrix, x, y, shipSize);
-
   const tr: JSX.Element[] = [];
   const theadTd: JSX.Element[] = [<td key="empty" />];
 
@@ -82,7 +80,6 @@ const TableField: FC<IProp> = (props: IProp) => {
         onDropShip={handleShipDrop}
         onShadowShipDrop={handleShadowDrop}
         onRemoveFromField={handleRemove}
-        onCanDrop={handleCanDrop}
       />);
     }
 
