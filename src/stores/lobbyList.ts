@@ -9,14 +9,6 @@ const LobbyElement = types.model('LobbyElement', {
 const LobbyList = types.model('LobbyList', {
   lobbys: types.map(LobbyElement),
 }).actions((self) => ({
-  lobbyList() {
-    import('../API/lobby').then((apiLobby) => {
-      apiLobby.lobbyList();
-    }).catch(() => {
-
-    });
-  },
-
   updateFromServer(data: IDataFromServer) {
     const lobbys: Record<string, unknown> = {};
 

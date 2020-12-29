@@ -1,7 +1,8 @@
-import { observer, inject } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import React, { FC, useEffect } from 'react';
+import useWebsocketServer from '../../shared/hooks/websocketServer';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
-import { ILobbyStore } from '../../stores/lobby';
+import { IDataFromServer, ILobbyStore } from '../../stores/lobby';
 import { ILobbyList } from '../../stores/lobbyList';
 import { GameStatus, ISetLobbyProps } from '../App/types';
 import { LobbyTable } from './styledComponents';
@@ -13,13 +14,18 @@ interface IProps extends ISetLobbyProps {
 const LobbyList: FC<IProps> = inject('lobbyList')(observer((props: IProps) => {
   const lobbyList = props.lobbyList as ILobbyList;
   const { handleSetLobby } = props;
+  const connectToLobby = useWebsocketServer('connectLobby');
+
+  const lobbyListRequest = useWebsocketServer('lobbyList', (data: IDataFromServer) => {
+    lobbyList.updateFromServer(data);
+  });
 
   useEffect(() => {
-    lobbyList.lobbyList();
-  }, [lobbyList]);
+    lobbyListRequest({});
+  }, [lobbyListRequest]);
 
   const handleJoin = (user: string, lobby: ILobbyStore) => {
-    lobby.connectToLobby(user);
+    connectToLobby(user);
     handleSetLobby(
       GameStatus.SET_SHIPS,
       lobby,

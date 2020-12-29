@@ -1,7 +1,6 @@
 import { inject, observer, useLocalObservable } from 'mobx-react';
 import React, { FC, useState } from 'react';
-import { sendReady } from '../../API/pairMessage';
-import useWebsocket from '../../shared/hooks/websocket';
+import useWebsocketOpponent from '../../shared/hooks/websocketOpponent';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
 import SelectShipsPosition from './Field/SelectShipsPosition';
@@ -45,7 +44,7 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props: IProps) => {
     },
   }));
 
-  useWebsocket('ready', () => {
+  const sendReady = useWebsocketOpponent('ready', () => {
     state.setOpponentReady();
 
     if (state.isReady && state.opponentReady) {
@@ -55,7 +54,7 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props: IProps) => {
 
   const handleReady = () => {
     state.setReady();
-    sendReady();
+    sendReady({});
 
     if (state.isReady && state.opponentReady) {
       mainStore?.setGameMatrix(dataMatrix);

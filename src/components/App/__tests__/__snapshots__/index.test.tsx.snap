@@ -678,8 +678,8 @@ exports[`App snapshots Check set ships 1`] = `
       <inject-with-mainStore(Object) mainStore={{...}}>
         <styled.div>
           <div className=\\"sc-fodVxV gZZuTH\\">
-            <inject-with-mainStore(Object) handleChangeGameStatus={[Function: handleGameStart]}>
-              <inject-with-mainStore(Object) handleChangeGameStatus={[Function: handleGameStart]} mainStore={{...}}>
+            <inject-with-mainStore(Object)>
+              <inject-with-mainStore(Object) mainStore={{...}}>
                 <styled.h1>
                   <h1 className=\\"sc-bdfBwQ display-3\\">
                     Set ships
@@ -1197,16 +1197,18 @@ exports[`App snapshots Check wait connect 1`] = `
     <inject-with-mainStore(Object) mainStore={{...}}>
       <styled.div>
         <div className=\\"sc-fodVxV gZZuTH\\">
-          <WaitConnect handleChangeGameStatus={[Function: handleGameStart]}>
-            <styled.h1>
-              <h1 className=\\"sc-bdfBwQ display-3\\">
-                Wait connect
-              </h1>
-            </styled.h1>
-            <button className=\\"btn btn-warning\\" onClick={[Function: stopProcessing]}>
-              Discard
-            </button>
-          </WaitConnect>
+          <inject-with-mainStore(Function)>
+            <Component mainStore={{...}}>
+              <styled.h1>
+                <h1 className=\\"sc-bdfBwQ display-3\\">
+                  Wait connect
+                </h1>
+              </styled.h1>
+              <button className=\\"btn btn-warning\\" onClick={[Function: stopProcessing]}>
+                Discard
+              </button>
+            </Component>
+          </inject-with-mainStore(Function)>
         </div>
       </styled.div>
     </inject-with-mainStore(Object)>

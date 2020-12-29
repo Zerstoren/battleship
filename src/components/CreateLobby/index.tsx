@@ -1,6 +1,7 @@
 import { getSnapshot } from 'mobx-state-tree';
 import React, { FC } from 'react';
 import { Field, Form } from 'react-final-form';
+import useWebsocketServer from '../../shared/hooks/websocketServer';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import LobbyStore from '../../stores/lobby';
 import { GameStatus, IProps } from '../App/types';
@@ -9,6 +10,8 @@ import { BlockSpacing, FloatingInput, FormFloating } from './styledComponents';
 import { FormInputData } from './types';
 
 const CreateLobby: FC<IProps> = ({ handleChangeGameStatus } : IProps) => {
+  const publishLobby = useWebsocketServer('newLobby');
+
   const store = LobbyStore.create({
     lobbyName: '',
   });
@@ -19,8 +22,7 @@ const CreateLobby: FC<IProps> = ({ handleChangeGameStatus } : IProps) => {
 
   const handleSubmit = (values: FormInputData) => {
     const lobbyStore = LobbyStore.create(convertFormDataToModel(values));
-
-    store.publishLobby();
+    publishLobby(getSnapshot(lobbyStore));
     handleChangeGameStatus(GameStatus.WAIT_CONNECT, lobbyStore);
   };
 

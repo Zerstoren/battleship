@@ -2,7 +2,7 @@ import { inject, observer } from 'mobx-react';
 import React, {
   FC, useEffect, useRef, useState,
 } from 'react';
-import useWebsocket from '../../shared/hooks/websocket';
+import useWebsocketOpponent from '../../shared/hooks/websocketOpponent';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
 import { FireTurn, GameStatus } from '../App/types';
@@ -22,18 +22,18 @@ const Game: FC<IProps> = inject('mainStore')(observer((props) => {
   const [dataOpponentMatrix, setOpponentMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
   const randInt = useRef(Math.random());
 
-  const selectWhoFirst = useWebsocket(
+  const selectWhoFirst = useWebsocketOpponent(
     'selectWhoFirst',
     (data: {rand: number}) => mainStore?.setFireTurn(data.rand > randInt.current ? FireTurn.OPPONENT : FireTurn.ME),
   );
 
-  const gameComplete = useWebsocket('gameComplete', (data: {game: string}) => {
+  const gameComplete = useWebsocketOpponent('gameComplete', (data: {game: string}) => {
     if (data.game === 'you_win') {
       mainStore?.setGameStatus(GameStatus.GAMEWIN);
     }
   });
 
-  const hitResolve = useWebsocket('hitResolve', (data: {x: number, y: number, hit: boolean}) => {
+  const hitResolve = useWebsocketOpponent('hitResolve', (data: {x: number, y: number, hit: boolean}) => {
     const { hit, x, y } = data;
 
     if (!hit) {
@@ -44,7 +44,7 @@ const Game: FC<IProps> = inject('mainStore')(observer((props) => {
     }
   });
 
-  const fire = useWebsocket('fireToPosition', (data: {x: number, y: number}) => {
+  const fire = useWebsocketOpponent('fireToPosition', (data: {x: number, y: number}) => {
     const [x, y] = [data.x, data.y];
 
     hitResolve({

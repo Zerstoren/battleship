@@ -1,11 +1,34 @@
 import React from 'react';
 import {mount} from 'enzyme';
+
+jest.mock('../../../shared/hooks/websocketServer', () => jest.fn());
+import * as WebsocketServer from '../../../shared/hooks/websocketServer';
+
 import CreateLobby from '..';
 import { GameStatus } from '../../App/types';
 
+const mockWebsocket = () => {
+  const useWebsocket: jest.Mock = WebsocketServer.default as jest.Mock;
+  const publicLobbyFn = jest.fn();
+  useWebsocket.mockImplementation(() => {
+    return publicLobbyFn;
+  });
+
+  return {
+    publicLobbyFn
+  };
+};
+
 describe('CreateLobby', () => {
+  beforeEach(() => {
+    //@ts-ignore
+    WebsocketServer.default.mockReset();
+  });
+
   test('Type all data', () => {
-    const mockCallback = jest.fn((state, lobby) => null);
+    mockWebsocket();
+
+    const mockCallback = jest.fn();
 
     const tree = mount(<CreateLobby handleChangeGameStatus={mockCallback} />);
     expect(tree.debug()).toMatchSnapshot();
@@ -63,6 +86,26 @@ describe('CreateLobby', () => {
     expect(mockCallback.mock.calls.length).toBe(0);
     expect(tree.find('input.is-invalid').length).toBe(4);
     expect(tree.debug()).toMatchSnapshot();
+  });
+
+  test('Lobby name not send to server', () => {
+    const { publicLobbyFn } = mockWebsocket();
+
+    const mockCallback = jest.fn();
+    const tree = mount(<CreateLobby handleChangeGameStatus={mockCallback} />);
+
+    tree.find('input[name="lobbyName"]').simulate("change", { target: { value: "Whooo" }});
+    tree.find('button.btn-primary').simulate('click');
+
+    expect(publicLobbyFn.mock.calls[0][0]).toEqual({
+      "lobbyName": "Whooo",
+      "ships1n": 4,
+      "ships2n": 3,
+      "ships3n": 2,
+      "ships4n": 1,
+      "x": 10,
+      "y": 10,
+    });
   });
 });
 

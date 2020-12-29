@@ -1,12 +1,28 @@
+import { inject } from 'mobx-react';
 import React, { FC } from 'react';
-import { unPubLobby } from '../../API/lobby';
+import useWebsocketServer from '../../shared/hooks/websocketServer';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
-import { GameStatus, IProps } from '../App/types';
+import { IMainStore } from '../../stores/mainStore';
+import { GameStatus } from '../App/types';
 
-const WaitConnect: FC<IProps> = (props: IProps) => {
+interface IProps {
+  mainStore?: IMainStore
+}
+
+const WaitConnect: FC<IProps> = inject('mainStore')((props: IProps) => {
+  const mainStore = props.mainStore as IMainStore;
+
+  const unPubLobby = useWebsocketServer('unPubLobby');
+
+  useWebsocketServer('gamePrepare', () => {
+    if (mainStore.status === GameStatus.WAIT_CONNECT && mainStore.currentLobby !== null) {
+      mainStore.setGameStatus(GameStatus.SET_SHIPS);
+    }
+  });
+
   const stopProcessing = () => {
-    unPubLobby();
-    props.handleChangeGameStatus(GameStatus.MAIN);
+    unPubLobby({});
+    mainStore.setGameStatus(GameStatus.MAIN);
   };
 
   return (
@@ -15,6 +31,6 @@ const WaitConnect: FC<IProps> = (props: IProps) => {
       <button className="btn btn-warning" onClick={stopProcessing}>Discard</button>
     </>
   );
-};
+});
 
 export default WaitConnect;

@@ -1,8 +1,8 @@
 import React from 'react';
 import {mount} from 'enzyme';
 
-jest.mock('../../../shared/hooks/websocket', () => jest.fn());
-import * as Websocket from '../../../shared/hooks/websocket';
+jest.mock('../../../shared/hooks/websocketOpponent', () => jest.fn());
+import * as Websocket from '../../../shared/hooks/websocketOpponent';
 
 import { IMainStore, MainStore } from '../../../stores/mainStore';
 import { FireTurn, GameStatus } from '../../App/types';

@@ -4,15 +4,15 @@ import client from '../../API/index';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ISendFn = (data: any) => void;
 
-const useWebsocket = (path: string, fn?: ISendFn) : ISendFn => {
+const useWebsocketServer = (path: string, fn?: ISendFn) : ISendFn => {
   useEffect(() => {
     if (!fn) {
       return () => null;
     }
 
-    const onMessage = (pairPath: string, data: {path: string}) => {
-      if (pairPath !== 'pairGet') return;
-      if (data.path === path) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const onMessage = (serverPath: string, data: any) => {
+      if (serverPath === path) {
         fn(data);
       }
     };
@@ -25,13 +25,8 @@ const useWebsocket = (path: string, fn?: ISendFn) : ISendFn => {
   }, [path, fn]);
 
   return (data: Record<string, unknown>) => {
-    const dataSend: {path: string} = {
-      ...data,
-      path,
-    };
-
-    client.send('pairSend', dataSend);
+    client.send(path, data);
   };
 };
 
-export default useWebsocket;
+export default useWebsocketServer;

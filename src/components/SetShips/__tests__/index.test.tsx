@@ -5,12 +5,8 @@ import { DndProvider } from 'react-dnd';
 import { ITestBackend, TestBackend } from 'react-dnd-test-backend';
 import { wrapInTestContext } from 'react-dnd-test-utils';
 
-jest.mock('../../../shared/hooks/websocket', () => jest.fn());
-jest.mock('../../../API/pairMessage', () => ({
-  sendReady: jest.fn()
-}));
-import * as Websocket from '../../../shared/hooks/websocket';
-import * as PairMessage from '../../../API/pairMessage';
+jest.mock('../../../shared/hooks/websocketOpponent', () => jest.fn());
+import * as Websocket from '../../../shared/hooks/websocketOpponent';
 
 import SetShips from '..';
 import { IMainStore, MainStore } from '../../../stores/mainStore';
@@ -23,6 +19,31 @@ class SetShipsWrapper extends React.Component {
     return (<SetShips />);
   }
 }
+
+const mockWebsocket = () => {
+  const useWebsocket: jest.Mock = Websocket.default as jest.Mock;
+  
+  type websocketFn = (data: Record<string, any>) => void;
+  const websocketFns: Record<string, websocketFn> = {
+    readyFn: () => null
+  }
+
+  const ready = jest.fn();
+  useWebsocket.mockImplementation((path, fn) => {
+    switch(path) {
+      case 'ready':
+        websocketFns.readyFn = fn;
+        return ready;
+      default:
+        throw new Error(`Path ${path} is not resolved`);
+    }
+  });
+
+  return {
+    ready,
+    websocketFns
+  };
+};
 
 describe('SetShips', () => {
   let mainStore: IMainStore;
@@ -41,8 +62,6 @@ describe('SetShips', () => {
       }
     });
 
-    //@ts-ignore
-    PairMessage.sendReady.mockReset();
     //@ts-ignore
     Websocket.default.mockReset();
   });
@@ -78,6 +97,7 @@ describe('SetShips', () => {
   });
 
   test('Check start game when opponent ready', () => {
+    const { ready, websocketFns } = mockWebsocket();
     const SetShipsWrap = wrapInTestContext(SetShipsWrapper);
     const ref: React.RefObject<any> = React.createRef();
     const tree = mount(
@@ -88,9 +108,7 @@ describe('SetShips', () => {
       </DndProvider>
     );
     const mockSetGameMatrix = jest.spyOn(mainStore, 'setGameMatrix');
-
-    const fnMock: jest.Mock = Websocket.default as jest.Mock;
-    fnMock.mock.calls[0][1]();
+    websocketFns.readyFn({});
 
     const backend: ITestBackend = ref.current.getManager().getBackend();
 
@@ -117,10 +135,11 @@ describe('SetShips', () => {
     expect(matrix[0][3]).toBe(MatrixFill.SET);
     expect(matrix[0][4]).toBe(MatrixFill.EMPTY);
 
-    expect(PairMessage.sendReady).toBeCalled();
+    expect(ready).toBeCalled();
   });
 
   test('Check start game after opponent ready', () => {
+    const { ready, websocketFns } = mockWebsocket();
     const SetShipsWrap = wrapInTestContext(SetShipsWrapper);
     const ref: React.RefObject<any> = React.createRef();
     const tree = mount(
@@ -152,13 +171,12 @@ describe('SetShips', () => {
     tree.find('.btn-primary').simulate('click');
     expect(tree.find('.btn-primary').prop('disabled')).toBeTruthy();
 
-    expect(PairMessage.sendReady).toBeCalled();
+    expect(ready).toBeCalled();
 
     expect(mockSetGameMatrix).not.toBeCalled();
 
     // No to action
-    const fnMock: jest.Mock = Websocket.default as jest.Mock;
-    fnMock.mock.calls[2][1]();
+    websocketFns.readyFn({});
 
     expect(mockSetGameMatrix).toBeCalled();
     const matrix: IMatrix = mockSetGameMatrix.mock.calls[0][0];

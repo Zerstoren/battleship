@@ -1,9 +1,9 @@
 import {
-  getSnapshot, Instance, SnapshotIn, SnapshotOut, types,
+  Instance, SnapshotIn, SnapshotOut, types,
 } from 'mobx-state-tree';
 
 export const lobbyIndexes = {
-  lobbyName: types.identifier,
+  lobbyName: types.string,
   x: types.optional(types.number, 10),
   y: types.optional(types.number, 10),
   ships4n: types.optional(types.number, 1),
@@ -12,19 +12,7 @@ export const lobbyIndexes = {
   ships1n: types.optional(types.number, 4),
 };
 
-const LobbyStore = types.model('Lobby', lobbyIndexes).actions((self) => ({
-  publishLobby() {
-    import('../API/lobby').then((apiLobby) => {
-      apiLobby.pubLobby(getSnapshot(self));
-    }).catch(() => {});
-  },
-
-  connectToLobby(userId: string) {
-    import('../API/lobby').then((apiLobby) => {
-      apiLobby.connectLobby(userId);
-    }).catch(() => {});
-  },
-}));
+const LobbyStore = types.model('Lobby', lobbyIndexes);
 
 const LobbyElementsStores = types.model('LobbyElements', {
   lobbys: types.array(LobbyStore),

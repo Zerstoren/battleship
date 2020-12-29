@@ -39,7 +39,7 @@ const App: FC<IAppProps> = inject('mainStore')(observer((props) => {
       break;
 
     case GameStatus.WAIT_CONNECT:
-      component = (<WaitConnect handleChangeGameStatus={handleGameStart} />);
+      component = (<WaitConnect />);
       break;
 
     case GameStatus.LOBBY_LIST:
@@ -47,7 +47,7 @@ const App: FC<IAppProps> = inject('mainStore')(observer((props) => {
       break;
 
     case GameStatus.SET_SHIPS:
-      component = (<SetShips handleChangeGameStatus={handleGameStart} />); break;
+      component = (<SetShips />); break;
 
     case GameStatus.GAME:
       component = (<Game />);
