@@ -16,11 +16,7 @@ const LobbyStore = types.model('Lobby', lobbyIndexes);
 
 const LobbyElementsStores = types.model('LobbyElements', {
   lobbys: types.array(LobbyStore),
-}).actions((self) => ({
-  addItems(data: IDataFromServer) {
-    self.lobbys.concat(Object.values(data));
-  },
-}));
+});
 
 export const lobbyElementsStores = LobbyElementsStores.create();
 

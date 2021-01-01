@@ -1,7 +1,5 @@
 import { inject, observer } from 'mobx-react';
-import React, { FC, useEffect } from 'react';
-import client from '../../API';
-import useWebsocketServer from '../../shared/hooks/websocketServer';
+import React, { FC } from 'react';
 import { ILobbyStore } from '../../stores/lobby';
 import { IMainStore } from '../../stores/mainStore';
 import CreateLobby from '../CreateLobby';
@@ -11,11 +9,9 @@ import LobbyList from '../LobbyList';
 import Main from '../MainPage';
 import SetShips from '../SetShips';
 import WaitConnect from '../WaitConnect';
+import useWebsocketAppReconnect from './hooks';
 import { AlertError, CenteredDiv } from './styledComponents';
 import { GameStatus } from './types';
-
-// @ts-expect-error: debug
-window.ws = client;
 
 interface IAppProps {
   mainStore?: IMainStore
@@ -24,53 +20,7 @@ interface IAppProps {
 const App: FC<IAppProps> = inject('mainStore')(observer((props) => {
   const state = props.mainStore as IMainStore;
 
-  useWebsocketServer('opponentDisconnect', () => {
-    state.setError('Disconnected');
-  });
-
-  useWebsocketServer('opponentReconnect', () => {
-    state.setError('');
-  });
-
-  const reconnectAction = useWebsocketServer('reconnect', (data: {error?: string, success?: string}) => {
-    if (data.error) {
-      state.setError(data.error);
-    } else {
-      state.setError('');
-    }
-  });
-
-  useEffect(() => {
-    let lastId: string;
-
-    const reconnectFn = () => {
-      if (!lastId) {
-        lastId = client.id;
-        return;
-      }
-
-      reconnectAction({
-        newId: client.id,
-        oldId: lastId,
-      });
-
-      lastId = client.id;
-    };
-
-    const disconnectFn = () => {
-      setTimeout(() => client.connect(), 1000);
-      state.setError('Disconnected, try reconnect');
-    };
-
-    client.on('disconnect', disconnectFn);
-    client.on('connect', reconnectFn);
-
-    return () => {
-      client.off('disconnect', disconnectFn);
-      client.off('connect', reconnectFn);
-    };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useWebsocketAppReconnect(state);
 
   const handleGameStart = (startGame: GameStatus) => state?.setGameStatus(startGame);
   const handleSetLobby = (startGame: GameStatus, lobby: ILobbyStore) => state?.setLobby(startGame, lobby);

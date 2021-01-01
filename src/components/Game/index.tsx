@@ -6,10 +6,9 @@ import useWebsocketOpponent from '../../shared/hooks/websocketOpponent';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
 import { FireTurn, GameStatus } from '../App/types';
-import {
-  matrix, matrixCountElements, matrixSetKillByPosition, matrixSetMissByPosition,
-} from '../SetShips/Field/TableField/helperFn';
-import { IMatrix, MatrixFill } from '../SetShips/Field/TableField/types';
+import { matrix } from '../SetShips/Field/TableField/helperFn';
+import { IMatrix } from '../SetShips/Field/TableField/types';
+import { useFireByPosition, useGameComplete, useHitResovle } from './hooks';
 import MyField from './MyField';
 import OpponentField from './OpponentField';
 import { FlexGameField, MyGameField, OpponentGameField } from './styledComponents';
@@ -27,47 +26,36 @@ const Game: FC<IProps> = inject('mainStore')(observer((props) => {
     (data: {rand: number}) => mainStore?.setFireTurn(data.rand > randInt.current ? FireTurn.OPPONENT : FireTurn.ME),
   );
 
-  const gameComplete = useWebsocketOpponent('gameComplete', (data: {game: string}) => {
-    if (data.game === 'you_win') {
-      mainStore?.setGameStatus(GameStatus.GAMEWIN);
-    }
+  const gameComplete = useGameComplete(() => {
+    mainStore?.setGameStatus(GameStatus.GAMEWIN);
   });
 
-  const hitResolve = useWebsocketOpponent('hitResolve', (data: {x: number, y: number, hit: boolean}) => {
-    const { hit, x, y } = data;
-
-    if (!hit) {
+  const hitResolve = useHitResovle(dataOpponentMatrix, (
+    opponentMatrix: IMatrix,
+    fireTurn: FireTurn | null,
+  ) : void => {
+    if (fireTurn) {
       mainStore?.setFireTurn(FireTurn.OPPONENT);
-      setOpponentMatrix(matrixSetMissByPosition(dataOpponentMatrix, x, y));
-    } else {
-      setOpponentMatrix(matrixSetKillByPosition(dataOpponentMatrix, x, y));
     }
+
+    setOpponentMatrix(opponentMatrix);
   });
 
-  const fire = useWebsocketOpponent('fireToPosition', (data: {x: number, y: number}) => {
-    const [x, y] = [data.x, data.y];
-
-    hitResolve({
-      hit: dataMyMatrix[y][x] === MatrixFill.SET,
-      x,
-      y,
-    });
-
-    if (dataMyMatrix[y][x] !== MatrixFill.SET) {
-      mainStore?.setFireTurn(FireTurn.ME);
-      setMyMatrix(
-        matrixSetMissByPosition(dataMyMatrix, x, y),
-      );
-    } else {
-      const newMatrix = matrixSetKillByPosition(dataMyMatrix, x, y);
-      setMyMatrix(newMatrix);
-
-      if (matrixCountElements(newMatrix, MatrixFill.SET) === 0) {
-        gameComplete({ game: 'you_win' });
-        mainStore?.setGameStatus(GameStatus.GAMEOVER);
+  const fire = useFireByPosition(
+    dataMyMatrix,
+    hitResolve,
+    (dataMatrix: IMatrix, fireTurn: FireTurn | null) => {
+      if (fireTurn) {
+        mainStore?.setFireTurn(fireTurn);
       }
-    }
-  });
+
+      setMyMatrix(dataMatrix);
+    },
+    () => {
+      gameComplete({ game: 'you_win' });
+      mainStore?.setGameStatus(GameStatus.GAMEOVER);
+    },
+  );
 
   useEffect(() => {
     if (mainStore?.fireTurn === FireTurn.NOBODY) {
