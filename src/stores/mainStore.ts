@@ -53,7 +53,6 @@ const MainStore = types.model('MainStore', {
   },
   setError(message: string) {
     self.error = message;
-    self.status = GameStatus.MAIN;
   },
   reset() {
     applySnapshot(self, {

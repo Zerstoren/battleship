@@ -9,6 +9,7 @@ const io = require('socket.io')(server, {
 const userPool = [];
 const userPair = {};
 const lobbys = {};
+const disconnectedPool = {};
 
 io.on('connection', (client) => {
   userPool.push(client);
@@ -16,12 +17,12 @@ io.on('connection', (client) => {
 
   client.on('message', (path, data) => {
     if (path === 'newLobby') {
-      lobbys[client.conn.id] = data;
+      lobbys[client.id] = data;
       resendLobbyListForAll();
     } 
 
     if (path === 'unPubLobby') {
-      delete lobbys[client.conn.id];
+      delete lobbys[client.id];
       resendLobbyListForAll();
     } 
 
@@ -30,17 +31,21 @@ io.on('connection', (client) => {
     }
 
     if (path === 'connectLobby') {
-      connectUsersPair(client, client.conn.id, data);
+      connectUsersPair(client, client.id, data);
     }
 
     if (path === 'pairSend') {
       pairMessage(client, data);
     }
+
+    if (path === 'reconnect') {
+      reconnect(client, data);
+    }
   });
 });
 
 const findClientById = (clientId) => userPool.find((client) => {
-  return client.conn.id === clientId;
+  return client.id === clientId;
 });
 
 const connectUsersPair = (client, clientId, targetId) => {
@@ -65,17 +70,29 @@ const connectUsersPair = (client, clientId, targetId) => {
 };
 
 const pairMessage = (client, data) => {
-  const targetClient = findClientById(userPair[client.conn.id]);
+  const targetClient = findClientById(userPair[client.id]);
+
+  if (!targetClient) {
+    client.send('opponentDisconnect');
+    return;
+  }
+
   targetClient.send('pairGet', data);
 };
 
 const processDisconnect = (client) => {
-  const connId = client.conn.id;
+  const connId = client.id;
   if (userPair[connId]) {
     const targetId = userPair[connId];
-    delete userPair[targetId];
-    delete userPair[connId];
-    findClientById(targetId).send('opponentDisconnect');
+
+    if (disconnectedPool[targetId]) {
+      clearTimeout(disconnectedPool[targetId]);
+      finallDisconnect(connId)();
+      delete disconnectedPool[targetId];
+    } else {
+      disconnectedPool[connId] = setTimeout(finallDisconnect(connId), 2000);
+      findClientById(targetId).send('opponentDisconnect');
+    }
   }
 
   userPool.slice(userPool.indexOf(client), 1);
@@ -84,6 +101,45 @@ const processDisconnect = (client) => {
     delete lobbys[connId];
     resendLobbyListForAll();
   }
+};
+
+const reconnect = (client, data) => {
+  const { oldId, newId } = data;
+  if (!disconnectedPool[oldId]) {
+    client.send('reconnect', {
+      error: 'Server clear all data by old identifier'
+    });
+    return;
+  }
+
+  clearTimeout(disconnectedPool[oldId]);
+  delete disconnectedPool[oldId];
+
+  if (!userPair[oldId]) {
+    client.send('reconnect', {
+      error: 'Opponent is disconnect from game'
+    });
+    return;
+  }
+
+  const oppontId = userPair[oldId];
+  userPair[newId] = userPair[oldId];
+  userPair[oppontId] = newId;
+
+  findClientById(oppontId).send('opponentReconnect');
+  client.send('reconnect', {
+    success: 'true'
+  });
+};
+
+const finallDisconnect = (connId) => {
+  const targetId = userPair[connId];
+
+  return () => {
+    delete disconnectedPool[connId];
+    delete userPair[targetId];
+    delete userPair[connId];
+  };
 };
 
 const resendLobbyListForAll = () => {
