@@ -5,6 +5,7 @@ import React, {
 import useWebsocketOpponent from '../../shared/hooks/websocketOpponent';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
+import { IMainStore } from '../../stores/mainStore';
 import { FireTurn, GameStatus } from '../App/types';
 import { matrix } from '../SetShips/Field/TableField/helperFn';
 import { IMatrix } from '../SetShips/Field/TableField/types';
@@ -15,7 +16,7 @@ import { FlexGameField, MyGameField, OpponentGameField } from './styledComponent
 import { IProps } from './types';
 
 const Game: FC<IProps> = inject('mainStore')(observer((props) => {
-  const { mainStore } = props;
+  const mainStore = props.mainStore as IMainStore;
   const lobby = mainStore?.currentLobby as ILobbyStore;
   const [dataMyMatrix, setMyMatrix] = useState<IMatrix>(mainStore?.gameMatrix as IMatrix);
   const [dataOpponentMatrix, setOpponentMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
@@ -27,7 +28,7 @@ const Game: FC<IProps> = inject('mainStore')(observer((props) => {
   );
 
   const gameComplete = useGameComplete(() => {
-    mainStore?.setGameStatus(GameStatus.GAMEWIN);
+    mainStore.setGameStatus(GameStatus.GAMEWIN);
   });
 
   const hitResolve = useHitResovle(dataOpponentMatrix, (

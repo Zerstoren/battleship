@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react';
 import useWebsocketOpponent from '../../shared/hooks/websocketOpponent';
 import { AppHeader } from '../../shared/StyledComponents/Headers';
 import { ILobbyStore } from '../../stores/lobby';
+import { IMainStore } from '../../stores/mainStore';
 import SelectShipsPosition from './Field/SelectShipsPosition';
 import TableField from './Field/TableField';
 import { matrix } from './Field/TableField/helperFn';
@@ -12,8 +13,8 @@ import { ButtonReady, ButtonReadyBlock } from './styledComponents';
 import { IProps } from './types';
 
 const SetShips: FC<IProps> = inject('mainStore')(observer((props: IProps) => {
-  const { mainStore } = props;
-  const lobby = mainStore?.currentLobby as ILobbyStore;
+  const mainStore = props.mainStore as IMainStore;
+  const lobby = mainStore.currentLobby as ILobbyStore;
 
   const [dataMatrix, setMatrix] = useState<IMatrix>(matrix(lobby.x, lobby.y));
 
@@ -23,7 +24,7 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props: IProps) => {
     state.setOpponentReady();
 
     if (state.isReady && state.opponentReady) {
-      mainStore?.setGameMatrix(dataMatrix);
+      mainStore.setGameMatrix(dataMatrix);
     }
   });
 
@@ -32,7 +33,7 @@ const SetShips: FC<IProps> = inject('mainStore')(observer((props: IProps) => {
     sendReady({});
 
     if (state.isReady && state.opponentReady) {
-      mainStore?.setGameMatrix(dataMatrix);
+      mainStore.setGameMatrix(dataMatrix);
     }
   };
 

@@ -55,7 +55,7 @@ const TableField: FC<IProp> = (props: IProp) => {
     const handleShipDrop = (x: number, y: number, shipSize: number) => {
       if (!matrixCheckCollision(localDataMatrix, x, y, shipSize)) {
         matrixCrossAndEmit(matrixClearShadows(localDataMatrix));
-        return;
+        return false;
       }
 
       matrixCrossAndEmit(
@@ -66,6 +66,7 @@ const TableField: FC<IProp> = (props: IProp) => {
           shipSize,
         ),
       );
+      return true;
     };
 
     const handleShadowDrop = (x: number, y: number, shipSize: number) => {

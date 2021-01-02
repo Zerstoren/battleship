@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { useDrag } from 'react-dnd';
 import { Ship, ShipBlock } from '../../../shared/StyledComponents/Ship';
+import { DropResult } from './TableField/types';
 
 interface IProp {
   onDragComplete: () => void,
@@ -16,7 +17,8 @@ const ShipElement : FC<IProp> = (props: IProp) => {
       monitorId: monitor.getHandlerId() as string,
     }),
     end: (item, monitor) => {
-      if (monitor.didDrop()) {
+      const dropResults = monitor.getDropResult() as DropResult;
+      if (monitor.didDrop() && dropResults.result) {
         onDragComplete();
       }
     },

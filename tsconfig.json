@@ -20,12 +20,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "downlevelIteration": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // "extendedDiagnostics": true,
+    "incremental": true,
   },
   "include": [
     "src"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules", "**/node_modules", "**/.*/"],
 }
