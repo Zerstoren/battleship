@@ -145,3 +145,27 @@ export const matrixCountElements = (dataMatrix: IMatrix, fill: MatrixFill) : num
 
     return accumulator;
   }, 0);
+
+type TCrossingArrayItem = {
+  x: number,
+  y: number,
+  data: MatrixFill
+};
+
+export const matrixCrossing = (needleStackMatrix: IMatrix, haystackMatrix: IMatrix) : TCrossingArrayItem[] => {
+  const crossingMap: TCrossingArrayItem[] = [];
+
+  haystackMatrix.forEach((yLine, yIndex) => {
+    yLine.forEach((xLine, xIndex) => {
+      if (xLine !== needleStackMatrix[yIndex][xIndex]) {
+        crossingMap.push({
+          x: xIndex,
+          y: yIndex,
+          data: xLine,
+        });
+      }
+    });
+  });
+
+  return crossingMap;
+};

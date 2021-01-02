@@ -87,11 +87,11 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=0][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=1][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=2][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=3][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=4][y=0]').props().fill).toBe(MatrixFill.EMPTY);
+    expect(tree.find('Cell[x=0][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=1][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=2][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=3][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=4][y=0] td').props().className).toBe('');
     expect(tree.find('ShipElement[shipSize=4]+span').text()).toBe(' x0');
     expect(tree.find('.btn-primary').length).toBe(1);
   });
@@ -120,11 +120,11 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=0][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=1][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=2][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=3][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=4][y=0]').props().fill).toBe(MatrixFill.EMPTY);
+    expect(tree.find('Cell[x=0][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=1][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=2][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=3][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=4][y=0] td').props().className).toBe('');
     tree.find('.btn-primary').simulate('click');
 
     expect(mockSetGameMatrix).toBeCalled();
@@ -161,11 +161,11 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=0][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=1][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=2][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=3][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=4][y=0]').props().fill).toBe(MatrixFill.EMPTY);
+    expect(tree.find('Cell[x=0][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=1][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=2][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=3][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=4][y=0] td').props().className).toBe('');
 
     expect(tree.find('.btn-primary').prop('disabled')).toBeFalsy();
     tree.find('.btn-primary').simulate('click');
@@ -209,18 +209,18 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=0][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=1][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=2][y=0]').props().fill).toBe(MatrixFill.SET);
-    expect(tree.find('Cell[x=3][y=0]').props().fill).toBe(MatrixFill.SET);
+    expect(tree.find('Cell[x=0][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=1][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=2][y=0] td').props().className).toBe('ship-set');
+    expect(tree.find('Cell[x=3][y=0] td').props().className).toBe('ship-set');
     expect(tree.find('ShipElement[shipSize=4]+span').text()).toBe(' x0');
 
     tree.find('Cell[x=2][y=0]').simulate('click');
     tree.update();
-    expect(tree.find('Cell[x=0][y=0]').props().fill).toBe(MatrixFill.EMPTY);
-    expect(tree.find('Cell[x=1][y=0]').props().fill).toBe(MatrixFill.EMPTY);
-    expect(tree.find('Cell[x=2][y=0]').props().fill).toBe(MatrixFill.EMPTY);
-    expect(tree.find('Cell[x=3][y=0]').props().fill).toBe(MatrixFill.EMPTY);
+    expect(tree.find('Cell[x=0][y=0] td').props().className).toBe('');
+    expect(tree.find('Cell[x=1][y=0] td').props().className).toBe('');
+    expect(tree.find('Cell[x=2][y=0] td').props().className).toBe('');
+    expect(tree.find('Cell[x=3][y=0] td').props().className).toBe('');
     expect(tree.find('ShipElement[shipSize=4]+span').text()).toBe(' x1');
   });
 
@@ -244,11 +244,11 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=0][y=0]').props().fill).toBe(MatrixFill.SHADOW);
-    expect(tree.find('Cell[x=1][y=0]').props().fill).toBe(MatrixFill.SHADOW);
-    expect(tree.find('Cell[x=2][y=0]').props().fill).toBe(MatrixFill.SHADOW);
-    expect(tree.find('Cell[x=3][y=0]').props().fill).toBe(MatrixFill.SHADOW);
-    expect(tree.find('Cell[x=4][y=0]').props().fill).toBe(MatrixFill.EMPTY);
+    expect(tree.find('Cell[x=0][y=0] td').props().className).toBe('ship-shadow');
+    expect(tree.find('Cell[x=1][y=0] td').props().className).toBe('ship-shadow');
+    expect(tree.find('Cell[x=2][y=0] td').props().className).toBe('ship-shadow');
+    expect(tree.find('Cell[x=3][y=0] td').props().className).toBe('ship-shadow');
+    expect(tree.find('Cell[x=4][y=0] td').props().className).toBe('');
     
     act(() => {
       backend.simulateDrop();
@@ -276,9 +276,9 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=7][y=0]').props().fill).toBe(MatrixFill.ERR_SHADOW);
-    expect(tree.find('Cell[x=8][y=0]').props().fill).toBe(MatrixFill.ERR_SHADOW);
-    expect(tree.find('Cell[x=9][y=0]').props().fill).toBe(MatrixFill.ERR_SHADOW);
+    expect(tree.find('Cell[x=7][y=0] td').props().className).toBe('ship-err-shadow');
+    expect(tree.find('Cell[x=8][y=0] td').props().className).toBe('ship-err-shadow');
+    expect(tree.find('Cell[x=9][y=0] td').props().className).toBe('ship-err-shadow');
 
     act(() => {
       backend.simulateDrop();
@@ -286,8 +286,8 @@ describe('SetShips', () => {
     });
 
     tree.update();
-    expect(tree.find('Cell[x=7][y=0]').props().fill).toBe(MatrixFill.EMPTY);
-    expect(tree.find('Cell[x=8][y=0]').props().fill).toBe(MatrixFill.EMPTY);
-    expect(tree.find('Cell[x=9][y=0]').props().fill).toBe(MatrixFill.EMPTY);
+    expect(tree.find('Cell[x=7][y=0] td').props().className).toBe('');
+    expect(tree.find('Cell[x=8][y=0] td').props().className).toBe('');
+    expect(tree.find('Cell[x=9][y=0] td').props().className).toBe('');
   });
 });

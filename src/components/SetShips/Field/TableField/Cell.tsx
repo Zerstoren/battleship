@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import { EventEmitter } from 'events';
+import React, { FC, useEffect, useState } from 'react';
 import { DropTargetMonitor, useDrop } from 'react-dnd';
 import { MatrixFill, DragObjectItem } from './types';
 
@@ -6,6 +7,7 @@ interface IProps {
   onDropShip: (x: number, y: number, shipSize: number) => void,
   onShadowShipDrop: (x: number, y: number, shipSize: number) => void,
   onRemoveFromField: (x: number, y: number) => void,
+  emitter: EventEmitter,
   fill: MatrixFill,
   x: number,
   y: number,
@@ -14,7 +16,14 @@ interface IProps {
 
 const Cell : FC<IProps> = (props: IProps) => {
   const {
-    onDropShip, onShadowShipDrop, onRemoveFromField, x, y, fill, disabled,
+    onDropShip,
+    onShadowShipDrop,
+    onRemoveFromField,
+    x,
+    y,
+    fill,
+    disabled,
+    emitter,
   } = props;
   const [collectedProps, drop] = useDrop<DragObjectItem, void, Record<string, string>>({
     accept: 'ship',
@@ -31,30 +40,49 @@ const Cell : FC<IProps> = (props: IProps) => {
     },
   });
 
-  const handleClick = () => fill === MatrixFill.SET && onRemoveFromField(x, y);
+  const [classNames, setClassNames] = useState<string>('');
+  const [fillState, setFillState] = useState<MatrixFill>(fill);
 
-  let classNames = '';
+  const handleClick = () => fillState === MatrixFill.SET && onRemoveFromField(x, y);
 
-  switch (fill) {
-    case MatrixFill.SHADOW:
-      classNames = 'ship-shadow';
-      break;
+  useEffect(() => {
+    let fillClass = '';
 
-    case MatrixFill.ERR_SHADOW:
-      classNames = 'ship-err-shadow';
-      break;
+    switch (fillState) {
+      case MatrixFill.SHADOW:
+        fillClass = 'ship-shadow';
+        break;
 
-    case MatrixFill.SET:
-      classNames = 'ship-set';
-      break;
+      case MatrixFill.ERR_SHADOW:
+        fillClass = 'ship-err-shadow';
+        break;
 
-    default:
-      break;
-  }
+      case MatrixFill.SET:
+        fillClass = 'ship-set';
+        break;
 
-  if (classNames && disabled) {
-    classNames = 'disabled';
-  }
+      default:
+        break;
+    }
+
+    if (fillClass && disabled) {
+      fillClass = 'disabled';
+    }
+
+    setClassNames(fillClass);
+  }, [fillState, disabled, setClassNames]);
+
+  useEffect(() => {
+    const getMessage = (emitterFill: MatrixFill) => {
+      setFillState(emitterFill);
+    };
+
+    emitter.on(`${x}_${y}`, getMessage);
+
+    return () => {
+      emitter.off(`${x}_${y}`, getMessage);
+    };
+  }, [emitter, x, y]);
 
   return (<td ref={drop} data-monitorid={collectedProps.monitorId} className={classNames} onClick={handleClick} />);
 };
