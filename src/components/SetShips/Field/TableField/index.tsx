@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 import React, { FC, useMemo, useState } from 'react';
-import useLetters from '../../../../shared/hooks/letters';
+import getMapField from '../../../../shared/helpers/mapField';
 import { ILobbyStore } from '../../../../stores/lobby';
 import { FieldTable } from '../../styledComponents';
 import Cell from './Cell';
@@ -28,11 +28,8 @@ const TableField: FC<IProp> = (props: IProp) => {
     lobby, shipRestore, disabled, dataMatrix, setMatrix,
   } = props;
   const [emitter] = useState<EventEmitter>(new EventEmitter());
-  const letters = useLetters();
 
-  const theadTd: JSX.Element[] = [<td key="empty" />];
-
-  const memoTr = useMemo(() => {
+  return useMemo(() => {
     let localDataMatrix = dataMatrix;
 
     const matrixCrossAndEmit = (newMatrix: IMatrix): boolean => {
@@ -89,50 +86,27 @@ const TableField: FC<IProp> = (props: IProp) => {
       shipRestore(shipSize);
     };
 
-    const tr: JSX.Element[] = [];
+    const table = getMapField(lobby, (x, y) => (
+      <Cell
+        key={`${y}-${x}`}
+        emitter={emitter}
+        fill={dataMatrix[y][x]}
+        x={x}
+        y={y}
+        disabled={disabled}
+        onDropShip={handleShipDrop}
+        onShadowShipDrop={handleShadowDrop}
+        onRemoveFromField={handleRemove}
+      />
+    ));
 
-    for (let y = 0; y < lobby.y; y++) {
-      const td: JSX.Element[] = [<td key={`head-${y}`}>{y + 1}</td>];
-
-      for (let x = 0; x < lobby.x; x++) {
-        td.push(<Cell
-          key={`${y}-${x}`}
-          emitter={emitter}
-          fill={dataMatrix[y][x]}
-          x={x}
-          y={y}
-          disabled={disabled}
-          onDropShip={handleShipDrop}
-          onShadowShipDrop={handleShadowDrop}
-          onRemoveFromField={handleRemove}
-        />);
-      }
-
-      tr.push(<tr key={y}>{td}</tr>);
-    }
-
-    return tr;
+    return (
+      <FieldTable sizeX={lobby.x} sizeY={lobby.y}>
+        {table}
+      </FieldTable>
+    );
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lobby, disabled, emitter]);
-
-  for (let x = 0; x < lobby.x; x++) {
-    theadTd.push(<td key={`head-${x}`}>{letters[x]}</td>);
-  }
-
-  return (
-    <>
-      <FieldTable sizeX={lobby.x} sizeY={lobby.y}>
-        <thead>
-          <tr>
-            {theadTd}
-          </tr>
-        </thead>
-        <tbody>
-          {memoTr}
-        </tbody>
-      </FieldTable>
-    </>
-  );
 };
 
 export default TableField;
